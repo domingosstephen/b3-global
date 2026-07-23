@@ -1,0 +1,239 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const values = [
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>`,
+    title_pt: 'Qualidade', title_en: 'Quality',
+    text_pt: 'Trabalhamos apenas com produtos certificados e marcas reconhecidas internacionalmente.',
+    text_en: 'We work exclusively with certified products and internationally recognized brands.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>`,
+    title_pt: 'Confiança', title_en: 'Trust',
+    text_pt: 'Mais de uma década de operações com clientes satisfeitos ao redor do mundo.',
+    text_en: 'Over a decade of operations with satisfied clients around the world.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>`,
+    title_pt: 'Agilidade', title_en: 'Speed',
+    text_pt: 'Entrega internacional segura via DHL com rastreamento em tempo real.',
+    text_en: 'Secure international delivery via DHL with real-time tracking.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>`,
+    title_pt: 'Suporte', title_en: 'Support',
+    text_pt: 'Atendimento multilíngue 24/7 para todas as suas necessidades comerciais.',
+    text_en: 'Multilingual 24/7 support for all your business needs.',
+  },
+];
+
+const benefits = [
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>`,
+    title_pt: 'Entrega Mundial', title_en: 'Worldwide Delivery',
+    text_pt: 'Enviamos para qualquer país com parceiros logísticos certificados e rastreamento completo.',
+    text_en: 'We ship to any country with certified logistics partners and full tracking.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>`,
+    title_pt: 'Garantia 100%', title_en: '100% Guarantee',
+    text_pt: 'Satisfação garantida ou seu dinheiro de volta, sem complicações.',
+    text_en: 'Satisfaction guaranteed or your money back, no hassle.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>`,
+    title_pt: 'Preço Justo', title_en: 'Fair Pricing',
+    text_pt: 'Preços competitivos com qualidade premium sem comprometer margens.',
+    text_en: 'Competitive prices with premium quality without compromising margins.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>`,
+    title_pt: 'Embalagem Segura', title_en: 'Safe Packaging',
+    text_pt: 'Produtos embalados com cuidado para chegar perfeitos ao destino.',
+    text_en: 'Products carefully packed to arrive in perfect condition at destination.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>`,
+    title_pt: 'Novidades Semanais', title_en: 'Weekly Updates',
+    text_pt: 'Novos produtos e promoções toda semana para manter seu negócio atualizado.',
+    text_en: 'New products and promotions every week to keep your business updated.',
+  },
+  {
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>`,
+    title_pt: 'Suporte Multilíngue', title_en: 'Multilingual Support',
+    text_pt: 'Atendimento em português, inglês e alemão para sua comodidade.',
+    text_en: 'Support in Portuguese, English, and German for your convenience.',
+  },
+];
+---
+<Layout title="Sobre" description="Conheça a B3 Global — empresa de importação e exportação de produtos europeus premium.">
+
+  <!-- HEADER -->
+  <section class="bg-navy-950 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gold-400 text-xs font-semibold tracking-widest uppercase mb-3">B3 Global</p>
+      <h1 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+        <span class="lang-pt">Sobre a B3 Global</span>
+        <span class="lang-en">About B3 Global</span>
+      </h1>
+      <p class="text-slate-400 text-base max-w-xl mx-auto">
+        <span class="lang-pt">Sua parceira de importação e exportação de confiança desde 2014</span>
+        <span class="lang-en">Your trusted import & export partner since 2014</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-block bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-5">
+            <span class="lang-pt">Nossa História</span>
+            <span class="lang-en">Our Story</span>
+          </div>
+          <h2 class="font-display font-bold text-3xl text-navy-900 mb-5">
+            <span class="lang-pt">Conectando Mercados Desde 2014</span>
+            <span class="lang-en">Connecting Markets Since 2014</span>
+          </h2>
+          <div class="space-y-4 text-slate-600 text-base leading-relaxed">
+            <p>
+              <span class="lang-pt">A B3 Global Importação e Exportação nasceu com um propósito claro: conectar os melhores produtos europeus ao mercado brasileiro e mundial. Com anos de experiência no comércio internacional, construímos uma rede sólida de fornecedores e parceiros que nos permite oferecer produtos de alta qualidade com preços competitivos.</span>
+              <span class="lang-en">B3 Global Import & Export was founded with a clear purpose: to connect the finest European products to the Brazilian market and beyond. With years of international trade experience, we have built a solid network of suppliers and partners that allows us to offer high-quality products at competitive prices.</span>
+            </p>
+            <p>
+              <span class="lang-pt">Desde os nossos humildes começos, evoluímos com base nas necessidades e desejos dos nossos clientes. Hoje, oferecemos mais de 150 produtos em 10 categorias distintas, servindo importadores, distribuidores e atacadistas no Brasil e no mundo.</span>
+              <span class="lang-en">Since our humble beginnings, we have evolved based on the needs and wishes of our clients. Today, we offer over 150 products in 10 distinct categories, serving importers, distributors, and wholesalers in Brazil and worldwide.</span>
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          {[
+            { num: '150+', label_pt: 'Produtos no Catálogo', label_en: 'Products in Catalog', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>` },
+            { num: '10',   label_pt: 'Categorias de Produtos', label_en: 'Product Categories', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>` },
+            { num: '6K+',  label_pt: 'Marcas Reconhecidas', label_en: 'Recognized Brands', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>` },
+            { num: '2014', label_pt: 'Ano de Fundação', label_en: 'Year Founded', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>` },
+          ].map(s => (
+            <div class="bg-navy-950 rounded-2xl p-6 text-center">
+              <svg class="w-5 h-5 text-gold-500/50 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={s.icon}></svg>
+              <div class="font-display font-extrabold text-3xl text-gold-500 mb-1">{s.num}</div>
+              <div class="text-slate-400 text-xs leading-tight">
+                <span class="lang-pt">{s.label_pt}</span>
+                <span class="lang-en">{s.label_en}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <div class="inline-block bg-navy-900/10 border border-navy-900/20 text-navy-800 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-6">
+        <span class="lang-pt">Nossa Missão</span>
+        <span class="lang-en">Our Mission</span>
+      </div>
+      <svg class="w-8 h-8 text-gold-400 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+      <blockquote class="font-display font-bold text-2xl md:text-3xl text-navy-900 leading-snug">
+        <span class="lang-pt">"Ser a ponte confiável entre produtores europeus e clientes no Brasil e no mundo, garantindo qualidade, transparência e excelência em cada transação."</span>
+        <span class="lang-en">"To be the trusted bridge between European producers and clients in Brazil and worldwide, ensuring quality, transparency, and excellence in every transaction."</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl text-navy-900 mb-3">
+          <span class="lang-pt">Nossos Valores</span>
+          <span class="lang-en">Our Values</span>
+        </h2>
+        <p class="text-slate-500 max-w-xl mx-auto text-sm">
+          <span class="lang-pt">Os pilares que guiam cada decisão e transação na B3 Global</span>
+          <span class="lang-en">The pillars that guide every decision and transaction at B3 Global</span>
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {values.map(v => (
+          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-7 hover:border-gold-400 hover:shadow-lg transition-all group">
+            <div class="w-12 h-12 bg-navy-900 group-hover:bg-gold-500 rounded-xl flex items-center justify-center mb-5 transition-colors">
+              <svg class="w-6 h-6 text-gold-400 group-hover:text-navy-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={v.icon}></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">
+              <span class="lang-pt">{v.title_pt}</span>
+              <span class="lang-en">{v.title_en}</span>
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              <span class="lang-pt">{v.text_pt}</span>
+              <span class="lang-en">{v.text_en}</span>
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY B3 -->
+  <section class="py-20 bg-navy-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display font-bold text-3xl md:text-4xl mb-3">
+          <span class="lang-pt">Por Que Escolher a B3 Global?</span>
+          <span class="lang-en">Why Choose B3 Global?</span>
+        </h2>
+        <p class="text-slate-400 max-w-xl mx-auto text-sm">
+          <span class="lang-pt">Diferenciais que tornam a B3 Global sua melhor escolha no comércio internacional</span>
+          <span class="lang-en">The differentials that make B3 Global your best choice in international trade</span>
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {benefits.map(b => (
+          <div class="flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={b.icon}></svg>
+            </div>
+            <div>
+              <h3 class="font-display font-semibold text-white text-sm mb-1">
+                <span class="lang-pt">{b.title_pt}</span>
+                <span class="lang-en">{b.title_en}</span>
+              </h3>
+              <p class="text-slate-400 text-xs leading-relaxed">
+                <span class="lang-pt">{b.text_pt}</span>
+                <span class="lang-en">{b.text_en}</span>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14 bg-gold-500 text-center">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="font-display font-bold text-2xl text-navy-900 mb-3">
+        <span class="lang-pt">Comece uma Parceria Agora</span>
+        <span class="lang-en">Start a Partnership Now</span>
+      </h2>
+      <p class="text-navy-800 text-sm mb-6">
+        <span class="lang-pt">Entre em contato com nossa equipe e descubra como a B3 Global pode impulsionar seu negócio.</span>
+        <span class="lang-en">Get in touch with our team and discover how B3 Global can boost your business.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm px-7 py-3 rounded-xl transition-all">
+          <span class="lang-pt">Entrar em Contato</span>
+          <span class="lang-en">Get in Touch</span>
+        </a>
+        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 text-navy-900 font-semibold text-sm px-7 py-3 rounded-xl transition-all">
+          <span class="lang-pt">Ver Produtos</span>
+          <span class="lang-en">View Products</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

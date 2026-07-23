@@ -1,0 +1,252 @@
+---
+const { title = 'B3 Global', description = 'B3 Global Importação e Exportação — Produtos europeus premium para o mundo.' } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+function isActive(path) {
+  if (path === '/' ) return currentPath === '/';
+  return currentPath.startsWith(path);
+}
+---
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — B3 Global</title>
+  <meta name="description" content={description} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Language init — runs before paint to avoid flash -->
+  <script is:inline>
+    (function() {
+      var lang = localStorage.getItem('b3lang') || 'pt';
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
+
+  <style is:inline>
+    [data-lang="pt"] .lang-en { display: none !important; }
+    [data-lang="en"] .lang-pt { display: none !important; }
+  </style>
+</head>
+<body class="bg-white font-sans text-slate-800 antialiased">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-navy-900 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-lg bg-gold-500 flex items-center justify-center font-display font-bold text-navy-900 text-sm leading-none select-none">B3</div>
+          <div class="leading-none">
+            <div class="font-display font-bold text-white text-base tracking-wide">B3 Global</div>
+            <div class="text-gold-400 text-[10px] tracking-widest uppercase font-medium leading-tight">
+              <span class="lang-pt">Importação & Exportação</span>
+              <span class="lang-en">Import & Export</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-1">
+          <a href="/" class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/') ? 'text-gold-400 bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
+            <span class="lang-pt">Início</span>
+            <span class="lang-en">Home</span>
+          </a>
+          <a href="/shop" class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/shop') ? 'text-gold-400 bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
+            <span class="lang-pt">Produtos</span>
+            <span class="lang-en">Products</span>
+          </a>
+          <a href="/about" class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/about') ? 'text-gold-400 bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
+            <span class="lang-pt">Sobre</span>
+            <span class="lang-en">About</span>
+          </a>
+          <a href="/contact" class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/contact') ? 'text-gold-400 bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
+            <span class="lang-pt">Contato</span>
+            <span class="lang-en">Contact</span>
+          </a>
+        </nav>
+
+        <!-- Right side: language toggle + CTA -->
+        <div class="flex items-center gap-3">
+          <!-- Language toggle -->
+          <div class="flex items-center rounded-full border border-white/20 overflow-hidden text-xs font-medium">
+            <button id="btn-pt" onclick="setLang('pt')" class="px-3 py-1.5 transition-colors text-slate-300 hover:text-white">PT</button>
+            <span class="text-white/20">|</span>
+            <button id="btn-en" onclick="setLang('en')" class="px-3 py-1.5 transition-colors text-slate-300 hover:text-white">EN</button>
+          </div>
+          <!-- CTA -->
+          <a href="/contact" class="hidden sm:inline-flex items-center gap-1.5 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors">
+            <span class="lang-pt">Solicitar Cotação</span>
+            <span class="lang-en">Request Quote</span>
+          </a>
+          <!-- Mobile menu btn -->
+          <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-1.5" aria-label="Menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10">
+      <div class="px-4 py-3 space-y-1">
+        <a href="/" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-md">
+          <span class="lang-pt">Início</span><span class="lang-en">Home</span>
+        </a>
+        <a href="/shop" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-md">
+          <span class="lang-pt">Produtos</span><span class="lang-en">Products</span>
+        </a>
+        <a href="/about" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-md">
+          <span class="lang-pt">Sobre</span><span class="lang-en">About</span>
+        </a>
+        <a href="/contact" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-md">
+          <span class="lang-pt">Contato</span><span class="lang-en">Contact</span>
+        </a>
+        <a href="/contact" class="block mt-2 bg-gold-500 text-navy-900 font-semibold text-sm px-3 py-2 rounded-lg text-center">
+          <span class="lang-pt">Solicitar Cotação</span><span class="lang-en">Request Quote</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-950 text-slate-400 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+
+        <!-- Brand -->
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-lg bg-gold-500 flex items-center justify-center font-display font-bold text-navy-900 text-sm">B3</div>
+            <div>
+              <div class="font-display font-bold text-white text-base">B3 Global</div>
+              <div class="text-gold-500 text-[10px] tracking-widest uppercase">
+                <span class="lang-pt">Importação & Exportação</span>
+                <span class="lang-en">Import & Export</span>
+              </div>
+            </div>
+          </div>
+          <p class="text-sm leading-relaxed mb-4">
+            <span class="lang-pt">Conectamos os melhores produtos europeus ao Brasil e ao mundo desde 2014.</span>
+            <span class="lang-en">Connecting the finest European products to Brazil and the world since 2014.</span>
+          </p>
+          <div class="flex gap-3">
+            <a href="mailto:info@b3globalimportacaoeexporta.com.br" class="text-xs text-gold-500 hover:text-gold-400 transition-colors">
+              info@b3globalimportacaoeexporta.com.br
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <h4 class="font-display font-semibold text-white text-sm mb-4 uppercase tracking-wider">
+            <span class="lang-pt">Links Rápidos</span>
+            <span class="lang-en">Quick Links</span>
+          </h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/" class="hover:text-white transition-colors"><span class="lang-pt">Início</span><span class="lang-en">Home</span></a></li>
+            <li><a href="/shop" class="hover:text-white transition-colors"><span class="lang-pt">Produtos</span><span class="lang-en">Products</span></a></li>
+            <li><a href="/about" class="hover:text-white transition-colors"><span class="lang-pt">Sobre Nós</span><span class="lang-en">About Us</span></a></li>
+            <li><a href="/contact" class="hover:text-white transition-colors"><span class="lang-pt">Contato</span><span class="lang-en">Contact</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div>
+          <h4 class="font-display font-semibold text-white text-sm mb-4 uppercase tracking-wider">
+            <span class="lang-pt">Categorias</span>
+            <span class="lang-en">Categories</span>
+          </h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/shop?cat=beverages" class="hover:text-white transition-colors"><span class="lang-pt">Bebidas</span><span class="lang-en">Beverages</span></a></li>
+            <li><a href="/shop?cat=confectionery" class="hover:text-white transition-colors"><span class="lang-pt">Confeitaria</span><span class="lang-en">Confectionery</span></a></li>
+            <li><a href="/shop?cat=cosmetics" class="hover:text-white transition-colors"><span class="lang-pt">Cosméticos</span><span class="lang-en">Cosmetics</span></a></li>
+            <li><a href="/shop?cat=dairy" class="hover:text-white transition-colors"><span class="lang-pt">Laticínios</span><span class="lang-en">Dairy</span></a></li>
+            <li><a href="/shop?cat=industrial" class="hover:text-white transition-colors"><span class="lang-pt">Industrial</span><span class="lang-en">Industrial</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div>
+          <h4 class="font-display font-semibold text-white text-sm mb-4 uppercase tracking-wider">
+            <span class="lang-pt">Suporte</span>
+            <span class="lang-en">Support</span>
+          </h4>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 mt-0.5">✓</span>
+              <span class="lang-pt">Frete Internacional DHL</span>
+              <span class="lang-en">DHL International Shipping</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 mt-0.5">✓</span>
+              <span class="lang-pt">Garantia 100% devolução</span>
+              <span class="lang-en">100% Money-Back Guarantee</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 mt-0.5">✓</span>
+              <span class="lang-pt">Suporte 24/7</span>
+              <span class="lang-en">24/7 Support</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-gold-500 mt-0.5">✓</span>
+              <span class="lang-pt">Suporte multilíngue</span>
+              <span class="lang-en">Multilingual Support</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>
+          © {new Date().getFullYear()} B3 Global Importação e Exportação.
+          <span class="lang-pt"> Todos os direitos reservados.</span>
+          <span class="lang-en"> All rights reserved.</span>
+        </p>
+        <p>b3globalimportacaoeexporta.com.br</p>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline>
+    // Language system
+    function setLang(lang) {
+      localStorage.setItem('b3lang', lang);
+      document.documentElement.setAttribute('data-lang', lang);
+      // Visual indicator for active language button
+      document.getElementById('btn-pt').style.color = lang === 'pt' ? '#d4a853' : '';
+      document.getElementById('btn-en').style.color = lang === 'en' ? '#d4a853' : '';
+    }
+
+    // Init button states
+    (function() {
+      var lang = document.documentElement.getAttribute('data-lang') || 'pt';
+      if (document.getElementById('btn-pt')) {
+        document.getElementById('btn-pt').style.color = lang === 'pt' ? '#d4a853' : '';
+        document.getElementById('btn-en').style.color = lang === 'en' ? '#d4a853' : '';
+      }
+    })();
+
+    // Mobile menu
+    var mobileBtn = document.getElementById('mobile-menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
