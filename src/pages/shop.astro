@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { products, categories, categoryIcons } from '../data/products.js';
 ---
-<Layout title="Produtos" description="Catálogo completo de produtos B3 Global — mais de 150 produtos europeus premium para importação e exportação.">
+<Layout title="Produtos" description="Catálogo completo de produtos B3 Global — mais de 150 produtos brasileiros premium para importação e exportação.">
 
   <!-- PAGE HEADER -->
   <section class="bg-navy-950 py-12">
@@ -11,10 +11,12 @@ import { products, categories, categoryIcons } from '../data/products.js';
       <h1 class="font-display font-bold text-3xl md:text-4xl text-white">
         <span class="lang-pt">Nosso Catálogo</span>
         <span class="lang-en">Our Catalog</span>
+        <span class="lang-fr">Notre Catalogue</span>
       </h1>
       <p class="text-slate-400 mt-2 text-sm">
         <span class="lang-pt">{products.length} produtos disponíveis para importação e exportação</span>
         <span class="lang-en">{products.length} products available for import and export</span>
+        <span class="lang-fr">{products.length} produits disponibles pour l'importation et l'exportation</span>
       </p>
     </div>
   </section>
@@ -33,13 +35,14 @@ import { products, categories, categoryIcons } from '../data/products.js';
       <div class="flex items-center gap-2 mt-3 overflow-x-auto pb-1" style="scrollbar-width:none;-ms-overflow-style:none;">
         <button data-cat="all" onclick="filterCat('all')" class="cat-btn shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border border-navy-900 bg-navy-900 text-white transition-all whitespace-nowrap">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <span class="lang-pt">Todos</span><span class="lang-en">All</span>
+          <span class="lang-pt">Todos</span><span class="lang-en">All</span><span class="lang-fr">Tous</span>
         </button>
         {categories.map(cat => (
           <button data-cat={cat.id} onclick={`filterCat('${cat.id}')`} class="cat-btn shrink-0 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border border-slate-200 bg-white text-slate-600 hover:border-navy-700 hover:text-navy-800 transition-all whitespace-nowrap">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={categoryIcons[cat.id]}></svg>
             <span class="lang-pt">{cat.label_pt}</span>
             <span class="lang-en">{cat.label_en}</span>
+            <span class="lang-fr">{cat.label_fr}</span>
           </button>
         ))}
       </div>
@@ -54,6 +57,7 @@ import { products, categories, categoryIcons } from '../data/products.js';
           <span id="count-num" class="font-semibold text-navy-800">{products.length}</span>
           <span class="lang-pt"> produtos encontrados</span>
           <span class="lang-en"> products found</span>
+          <span class="lang-fr"> produits trouvés</span>
         </p>
       </div>
 
@@ -82,12 +86,14 @@ import { products, categories, categoryIcons } from '../data/products.js';
                 <p class="text-[10px] text-slate-400 font-medium uppercase tracking-wide mb-1">
                   <span class="lang-pt">{cat?.label_pt}</span>
                   <span class="lang-en">{cat?.label_en}</span>
+                  <span class="lang-fr">{cat?.label_fr}</span>
                 </p>
                 <h3 class="font-semibold text-navy-900 text-xs leading-snug mb-2.5 min-h-[2rem] line-clamp-2">{p.name}</h3>
                 <a href="/contact" class="flex items-center justify-center gap-1 w-full bg-slate-100 hover:bg-navy-900 text-navy-800 hover:text-white font-semibold text-[10px] py-2 rounded-lg transition-all">
                   <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                   <span class="lang-pt">Solicitar Cotação</span>
                   <span class="lang-en">Request Quote</span>
+                  <span class="lang-fr">Demander un Devis</span>
                 </a>
               </div>
             </div>
@@ -103,14 +109,17 @@ import { products, categories, categoryIcons } from '../data/products.js';
         <h3 class="font-display font-bold text-xl text-navy-900 mb-2">
           <span class="lang-pt">Nenhum produto encontrado</span>
           <span class="lang-en">No products found</span>
+          <span class="lang-fr">Aucun produit trouvé</span>
         </h3>
         <p class="text-slate-500 text-sm mb-6">
           <span class="lang-pt">Tente uma busca diferente ou veja todas as categorias</span>
           <span class="lang-en">Try a different search or view all categories</span>
+          <span class="lang-fr">Essayez une recherche différente ou consultez toutes les catégories</span>
         </p>
         <button onclick="filterCat('all'); document.getElementById('search-input').value=''; applyFilters();" class="inline-flex items-center gap-2 bg-navy-900 text-white font-semibold text-sm px-5 py-2.5 rounded-xl hover:bg-gold-500 hover:text-navy-900 transition-all">
           <span class="lang-pt">Ver Todos</span>
           <span class="lang-en">View All</span>
+          <span class="lang-fr">Voir Tout</span>
         </button>
       </div>
     </div>
@@ -122,15 +131,18 @@ import { products, categories, categoryIcons } from '../data/products.js';
       <h2 class="font-display font-bold text-2xl text-white mb-3">
         <span class="lang-pt">Não encontrou o que procura?</span>
         <span class="lang-en">Didn't find what you're looking for?</span>
+        <span class="lang-fr">Vous n'avez pas trouvé ce que vous cherchez ?</span>
       </h2>
       <p class="text-slate-400 text-sm mb-6">
         <span class="lang-pt">Entre em contato e consultamos nosso portfólio completo para você.</span>
         <span class="lang-en">Get in touch and we'll consult our full portfolio for you.</span>
+        <span class="lang-fr">Contactez-nous et nous consulterons notre portefeuille complet pour vous.</span>
       </p>
       <a href="/contact" class="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm px-7 py-3 rounded-xl transition-all hover:-translate-y-0.5">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
         <span class="lang-pt">Falar com a Equipe</span>
         <span class="lang-en">Talk to the Team</span>
+        <span class="lang-fr">Parler à l'Équipe</span>
       </a>
     </div>
   </section>
@@ -153,7 +165,7 @@ import { products, categories, categoryIcons } from '../data/products.js';
   function setPlaceholder() {
     var lang = document.documentElement.getAttribute('data-lang') || 'pt';
     var input = document.getElementById('search-input');
-    if (input) input.placeholder = lang === 'pt' ? 'Buscar produtos...' : 'Search products...';
+    if (input) input.placeholder = lang === 'pt' ? 'Buscar produtos...' : lang === 'fr' ? 'Rechercher des produits...' : 'Search products...';
   }
 
   document.getElementById('search-input').addEventListener('input', function(e) {

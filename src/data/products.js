@@ -15,16 +15,16 @@ export const categoryIcons = {
 };
 
 export const categories = [
-  { id: 'beverages',     label_pt: 'Bebidas',                  label_en: 'Beverages' },
-  { id: 'confectionery', label_pt: 'Confeitaria',               label_en: 'Confectionery' },
-  { id: 'cosmetics',     label_pt: 'Cosméticos',                label_en: 'Cosmetics' },
-  { id: 'dairy',         label_pt: 'Laticínios',                label_en: 'Dairy' },
-  { id: 'nuts',          label_pt: 'Nozes & Castanhas',         label_en: 'Nuts & Seeds' },
-  { id: 'oils',          label_pt: 'Óleos & Açúcares',          label_en: 'Oils & Sugars' },
-  { id: 'paper',         label_pt: 'Papel',                     label_en: 'Paper' },
-  { id: 'scraps',        label_pt: 'Sucata & Materiais',        label_en: 'Scrap & Materials' },
-  { id: 'meats',         label_pt: 'Carnes & Proteínas',        label_en: 'Meats & Proteins' },
-  { id: 'industrial',    label_pt: 'Industrial & Eletrônicos',  label_en: 'Industrial & Electronics' },
+  { id: 'beverages',     label_pt: 'Bebidas',                  label_en: 'Beverages',              label_fr: 'Boissons' },
+  { id: 'confectionery', label_pt: 'Confeitaria',               label_en: 'Confectionery',           label_fr: 'Confiserie' },
+  { id: 'cosmetics',     label_pt: 'Cosméticos',                label_en: 'Cosmetics',               label_fr: 'Cosmétiques' },
+  { id: 'dairy',         label_pt: 'Laticínios',                label_en: 'Dairy',                   label_fr: 'Produits Laitiers' },
+  { id: 'nuts',          label_pt: 'Nozes & Castanhas',         label_en: 'Nuts & Seeds',            label_fr: 'Noix & Graines' },
+  { id: 'oils',          label_pt: 'Óleos & Açúcares',          label_en: 'Oils & Sugars',           label_fr: 'Huiles & Sucres' },
+  { id: 'paper',         label_pt: 'Papel',                     label_en: 'Paper',                   label_fr: 'Papier' },
+  { id: 'scraps',        label_pt: 'Sucata & Materiais',        label_en: 'Scrap & Materials',       label_fr: 'Ferraille & Matériaux' },
+  { id: 'meats',         label_pt: 'Carnes & Proteínas',        label_en: 'Meats & Proteins',        label_fr: 'Viandes & Protéines' },
+  { id: 'industrial',    label_pt: 'Industrial & Eletrônicos',  label_en: 'Industrial & Electronics', label_fr: 'Industriel & Électronique' },
 ];
 
 export const products = [

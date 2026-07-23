@@ -28,6 +28,10 @@ function isActive(path) {
 
   <style is:inline>
     [data-lang="pt"] .lang-en { display: none !important; }
+    [data-lang="pt"] .lang-fr { display: none !important; }
+    [data-lang="en"] .lang-fr { display: none !important; }
+    [data-lang="fr"] .lang-pt { display: none !important; }
+    [data-lang="fr"] .lang-en { display: none !important; }
     [data-lang="en"] .lang-pt { display: none !important; }
   </style>
 </head>
@@ -46,6 +50,7 @@ function isActive(path) {
             <div class="text-gold-400 text-[10px] tracking-widest uppercase font-medium leading-tight">
               <span class="lang-pt">Importação & Exportação</span>
               <span class="lang-en">Import & Export</span>
+              <span class="lang-fr">Importation & Exportation</span>
             </div>
           </div>
         </a>
@@ -55,18 +60,22 @@ function isActive(path) {
           <a href="/" class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/') ? 'text-gold-400 bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
             <span class="lang-pt">Início</span>
             <span class="lang-en">Home</span>
+            <span class="lang-fr">Accueil</span>
           </a>
           <a href="/shop" class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/shop') ? 'text-gold-400 bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
             <span class="lang-pt">Produtos</span>
             <span class="lang-en">Products</span>
+            <span class="lang-fr">Produits</span>
           </a>
           <a href="/about" class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/about') ? 'text-gold-400 bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
             <span class="lang-pt">Sobre</span>
             <span class="lang-en">About</span>
+            <span class="lang-fr">À Propos</span>
           </a>
           <a href="/contact" class={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/contact') ? 'text-gold-400 bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
             <span class="lang-pt">Contato</span>
             <span class="lang-en">Contact</span>
+            <span class="lang-fr">Contact</span>
           </a>
         </nav>
 
@@ -77,11 +86,14 @@ function isActive(path) {
             <button id="btn-pt" onclick="setLang('pt')" class="px-3 py-1.5 transition-colors text-slate-300 hover:text-white">PT</button>
             <span class="text-white/20">|</span>
             <button id="btn-en" onclick="setLang('en')" class="px-3 py-1.5 transition-colors text-slate-300 hover:text-white">EN</button>
+            <span class="text-white/20">|</span>
+            <button id="btn-fr" onclick="setLang('fr')" class="px-3 py-1.5 transition-colors text-slate-300 hover:text-white">FR</button>
           </div>
           <!-- CTA -->
           <a href="/contact" class="hidden sm:inline-flex items-center gap-1.5 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-sm px-4 py-2 rounded-lg transition-colors">
             <span class="lang-pt">Solicitar Cotação</span>
             <span class="lang-en">Request Quote</span>
+            <span class="lang-fr">Demander un Devis</span>
           </a>
           <!-- Mobile menu btn -->
           <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-1.5" aria-label="Menu">
@@ -97,19 +109,19 @@ function isActive(path) {
     <div id="mobile-menu" class="hidden md:hidden border-t border-white/10">
       <div class="px-4 py-3 space-y-1">
         <a href="/" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-md">
-          <span class="lang-pt">Início</span><span class="lang-en">Home</span>
+          <span class="lang-pt">Início</span><span class="lang-en">Home</span><span class="lang-fr">Accueil</span>
         </a>
         <a href="/shop" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-md">
-          <span class="lang-pt">Produtos</span><span class="lang-en">Products</span>
+          <span class="lang-pt">Produtos</span><span class="lang-en">Products</span><span class="lang-fr">Produits</span>
         </a>
         <a href="/about" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-md">
-          <span class="lang-pt">Sobre</span><span class="lang-en">About</span>
+          <span class="lang-pt">Sobre</span><span class="lang-en">About</span><span class="lang-fr">À Propos</span>
         </a>
         <a href="/contact" class="block px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-md">
-          <span class="lang-pt">Contato</span><span class="lang-en">Contact</span>
+          <span class="lang-pt">Contato</span><span class="lang-en">Contact</span><span class="lang-fr">Contact</span>
         </a>
         <a href="/contact" class="block mt-2 bg-gold-500 text-navy-900 font-semibold text-sm px-3 py-2 rounded-lg text-center">
-          <span class="lang-pt">Solicitar Cotação</span><span class="lang-en">Request Quote</span>
+          <span class="lang-pt">Solicitar Cotação</span><span class="lang-en">Request Quote</span><span class="lang-fr">Demander un Devis</span>
         </a>
       </div>
     </div>
@@ -134,12 +146,14 @@ function isActive(path) {
               <div class="text-gold-500 text-[10px] tracking-widest uppercase">
                 <span class="lang-pt">Importação & Exportação</span>
                 <span class="lang-en">Import & Export</span>
+                <span class="lang-fr">Importation & Exportation</span>
               </div>
             </div>
           </div>
           <p class="text-sm leading-relaxed mb-4">
-            <span class="lang-pt">Conectamos os melhores produtos europeus ao Brasil e ao mundo desde 2014.</span>
-            <span class="lang-en">Connecting the finest European products to Brazil and the world since 2014.</span>
+            <span class="lang-pt">Conectamos os melhores produtos brasileiros ao mundo desde 2006. Envios do Brasil, com filiais nos EUA e Canadá.</span>
+            <span class="lang-en">Connecting the finest Brazilian products to the world since 2006. Primary shipments from Brazil, with subsidiaries in the USA and Canada.</span>
+            <span class="lang-fr">Les meilleurs produits brésiliens au monde depuis 2006. Expéditions depuis le Brésil, avec filiales aux États-Unis et au Canada.</span>
           </p>
           <div class="flex gap-3">
             <a href="mailto:info@b3globalimportacaoeexporta.com.br" class="text-xs text-gold-500 hover:text-gold-400 transition-colors">
@@ -153,12 +167,13 @@ function isActive(path) {
           <h4 class="font-display font-semibold text-white text-sm mb-4 uppercase tracking-wider">
             <span class="lang-pt">Links Rápidos</span>
             <span class="lang-en">Quick Links</span>
+            <span class="lang-fr">Liens Rapides</span>
           </h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="/" class="hover:text-white transition-colors"><span class="lang-pt">Início</span><span class="lang-en">Home</span></a></li>
-            <li><a href="/shop" class="hover:text-white transition-colors"><span class="lang-pt">Produtos</span><span class="lang-en">Products</span></a></li>
-            <li><a href="/about" class="hover:text-white transition-colors"><span class="lang-pt">Sobre Nós</span><span class="lang-en">About Us</span></a></li>
-            <li><a href="/contact" class="hover:text-white transition-colors"><span class="lang-pt">Contato</span><span class="lang-en">Contact</span></a></li>
+            <li><a href="/" class="hover:text-white transition-colors"><span class="lang-pt">Início</span><span class="lang-en">Home</span><span class="lang-fr">Accueil</span></a></li>
+            <li><a href="/shop" class="hover:text-white transition-colors"><span class="lang-pt">Produtos</span><span class="lang-en">Products</span><span class="lang-fr">Produits</span></a></li>
+            <li><a href="/about" class="hover:text-white transition-colors"><span class="lang-pt">Sobre Nós</span><span class="lang-en">About Us</span><span class="lang-fr">À Propos</span></a></li>
+            <li><a href="/contact" class="hover:text-white transition-colors"><span class="lang-pt">Contato</span><span class="lang-en">Contact</span><span class="lang-fr">Contact</span></a></li>
           </ul>
         </div>
 
@@ -167,13 +182,14 @@ function isActive(path) {
           <h4 class="font-display font-semibold text-white text-sm mb-4 uppercase tracking-wider">
             <span class="lang-pt">Categorias</span>
             <span class="lang-en">Categories</span>
+            <span class="lang-fr">Catégories</span>
           </h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="/shop?cat=beverages" class="hover:text-white transition-colors"><span class="lang-pt">Bebidas</span><span class="lang-en">Beverages</span></a></li>
-            <li><a href="/shop?cat=confectionery" class="hover:text-white transition-colors"><span class="lang-pt">Confeitaria</span><span class="lang-en">Confectionery</span></a></li>
-            <li><a href="/shop?cat=cosmetics" class="hover:text-white transition-colors"><span class="lang-pt">Cosméticos</span><span class="lang-en">Cosmetics</span></a></li>
-            <li><a href="/shop?cat=dairy" class="hover:text-white transition-colors"><span class="lang-pt">Laticínios</span><span class="lang-en">Dairy</span></a></li>
-            <li><a href="/shop?cat=industrial" class="hover:text-white transition-colors"><span class="lang-pt">Industrial</span><span class="lang-en">Industrial</span></a></li>
+            <li><a href="/shop?cat=beverages" class="hover:text-white transition-colors"><span class="lang-pt">Bebidas</span><span class="lang-en">Beverages</span><span class="lang-fr">Boissons</span></a></li>
+            <li><a href="/shop?cat=confectionery" class="hover:text-white transition-colors"><span class="lang-pt">Confeitaria</span><span class="lang-en">Confectionery</span><span class="lang-fr">Confiserie</span></a></li>
+            <li><a href="/shop?cat=cosmetics" class="hover:text-white transition-colors"><span class="lang-pt">Cosméticos</span><span class="lang-en">Cosmetics</span><span class="lang-fr">Cosmétiques</span></a></li>
+            <li><a href="/shop?cat=dairy" class="hover:text-white transition-colors"><span class="lang-pt">Laticínios</span><span class="lang-en">Dairy</span><span class="lang-fr">Produits Laitiers</span></a></li>
+            <li><a href="/shop?cat=industrial" class="hover:text-white transition-colors"><span class="lang-pt">Industrial</span><span class="lang-en">Industrial</span><span class="lang-fr">Industriel</span></a></li>
           </ul>
         </div>
 
@@ -182,27 +198,32 @@ function isActive(path) {
           <h4 class="font-display font-semibold text-white text-sm mb-4 uppercase tracking-wider">
             <span class="lang-pt">Suporte</span>
             <span class="lang-en">Support</span>
+            <span class="lang-fr">Support</span>
           </h4>
           <ul class="space-y-3 text-sm">
             <li class="flex items-start gap-2">
               <span class="text-gold-500 mt-0.5">✓</span>
               <span class="lang-pt">Frete Internacional DHL</span>
               <span class="lang-en">DHL International Shipping</span>
+              <span class="lang-fr">Expédition Internationale DHL</span>
             </li>
             <li class="flex items-start gap-2">
               <span class="text-gold-500 mt-0.5">✓</span>
               <span class="lang-pt">Garantia 100% devolução</span>
               <span class="lang-en">100% Money-Back Guarantee</span>
+              <span class="lang-fr">Garantie 100% Remboursement</span>
             </li>
             <li class="flex items-start gap-2">
               <span class="text-gold-500 mt-0.5">✓</span>
               <span class="lang-pt">Suporte 24/7</span>
               <span class="lang-en">24/7 Support</span>
+              <span class="lang-fr">Support 24h/7j</span>
             </li>
             <li class="flex items-start gap-2">
               <span class="text-gold-500 mt-0.5">✓</span>
               <span class="lang-pt">Suporte multilíngue</span>
               <span class="lang-en">Multilingual Support</span>
+              <span class="lang-fr">Support Multilingue</span>
             </li>
           </ul>
         </div>
@@ -214,6 +235,7 @@ function isActive(path) {
           © {new Date().getFullYear()} B3 Global Importação e Exportação.
           <span class="lang-pt"> Todos os direitos reservados.</span>
           <span class="lang-en"> All rights reserved.</span>
+          <span class="lang-fr"> Tous droits réservés.</span>
         </p>
         <p>b3globalimportacaoeexporta.com.br</p>
       </div>
@@ -228,6 +250,7 @@ function isActive(path) {
       // Visual indicator for active language button
       document.getElementById('btn-pt').style.color = lang === 'pt' ? '#d4a853' : '';
       document.getElementById('btn-en').style.color = lang === 'en' ? '#d4a853' : '';
+      document.getElementById('btn-fr').style.color = lang === 'fr' ? '#d4a853' : '';
     }
 
     // Init button states
@@ -236,6 +259,7 @@ function isActive(path) {
       if (document.getElementById('btn-pt')) {
         document.getElementById('btn-pt').style.color = lang === 'pt' ? '#d4a853' : '';
         document.getElementById('btn-en').style.color = lang === 'en' ? '#d4a853' : '';
+        document.getElementById('btn-fr').style.color = lang === 'fr' ? '#d4a853' : '';
       }
     })();
 

@@ -10,10 +10,12 @@ import Layout from '../layouts/Layout.astro';
       <h1 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
         <span class="lang-pt">Entre em Contato</span>
         <span class="lang-en">Get In Touch</span>
+        <span class="lang-fr">Contactez-Nous</span>
       </h1>
       <p class="text-slate-400 text-base max-w-xl mx-auto">
         <span class="lang-pt">Pronto para iniciar uma parceria? Nossa equipe responde em até 24 horas.</span>
         <span class="lang-en">Ready to start a partnership? Our team responds within 24 hours.</span>
+        <span class="lang-fr">Prêt à démarrer un partenariat ? Notre équipe répond en moins de 24 heures.</span>
       </p>
     </div>
   </section>
@@ -29,6 +31,7 @@ import Layout from '../layouts/Layout.astro';
             <h2 class="font-display font-bold text-2xl text-navy-900 mb-5">
               <span class="lang-pt">Informações de Contato</span>
               <span class="lang-en">Contact Information</span>
+              <span class="lang-fr">Informations de Contact</span>
             </h2>
             <div class="space-y-4">
 
@@ -49,7 +52,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
               </div>
 
-              <!-- WhatsApp placeholder -->
+              <!-- WhatsApp -->
               <div class="flex items-start gap-3 p-4 bg-white rounded-xl border border-slate-200">
                 <div class="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center shrink-0">
                   <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -59,10 +62,9 @@ import Layout from '../layouts/Layout.astro';
                 </div>
                 <div>
                   <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-0.5">WhatsApp</div>
-                  <div class="text-slate-500 italic text-sm">
-                    <span class="lang-pt">A ser adicionado</span>
-                    <span class="lang-en">To be added</span>
-                  </div>
+                  <a href="https://wa.me/5511953954562" class="text-navy-900 font-medium text-sm hover:text-gold-600 transition-colors">
+                    +55 11 95395-4562
+                  </a>
                 </div>
               </div>
 
@@ -78,10 +80,12 @@ import Layout from '../layouts/Layout.astro';
                   <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-0.5">
                     <span class="lang-pt">Endereço</span>
                     <span class="lang-en">Address</span>
+                    <span class="lang-fr">Adresse</span>
                   </div>
                   <div class="text-slate-500 italic text-sm">
-                    <span class="lang-pt">A ser adicionado</span>
-                    <span class="lang-en">To be added</span>
+                    <span class="lang-pt">Brasil (principal) · EUA · Canadá</span>
+                    <span class="lang-en">Brazil (main) · USA · Canada</span>
+                    <span class="lang-fr">Brésil (principal) · États-Unis · Canada</span>
                   </div>
                 </div>
               </div>
@@ -97,11 +101,13 @@ import Layout from '../layouts/Layout.astro';
                   <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-0.5">
                     <span class="lang-pt">Suporte</span>
                     <span class="lang-en">Support</span>
+                    <span class="lang-fr">Support</span>
                   </div>
                   <div class="text-navy-900 font-semibold text-sm">24/7</div>
                   <div class="text-slate-500 text-xs">
                     <span class="lang-pt">Sempre disponível</span>
                     <span class="lang-en">Always available</span>
+                    <span class="lang-fr">Toujours disponible</span>
                   </div>
                 </div>
               </div>
@@ -113,20 +119,22 @@ import Layout from '../layouts/Layout.astro';
             <h3 class="font-display font-semibold text-white text-sm mb-4">
               <span class="lang-pt">Nossas Garantias</span>
               <span class="lang-en">Our Guarantees</span>
+              <span class="lang-fr">Nos Garanties</span>
             </h3>
             <ul class="space-y-3">
               {[
-                { pt: 'Resposta em até 24 horas', en: 'Response within 24 hours' },
-                { pt: 'Cotação sem compromisso', en: 'No-obligation quote' },
-                { pt: 'Suporte multilíngue', en: 'Multilingual support' },
-                { pt: 'Entrega via DHL rastreada', en: 'Tracked DHL delivery' },
-                { pt: 'Garantia 100% satisfação', en: '100% satisfaction guarantee' },
+                { pt: 'Resposta em até 24 horas', en: 'Response within 24 hours', fr: 'Réponse en moins de 24 heures' },
+                { pt: 'Cotação sem compromisso', en: 'No-obligation quote', fr: 'Devis sans engagement' },
+                { pt: 'Suporte multilíngue', en: 'Multilingual support', fr: 'Support multilingue' },
+                { pt: 'Entrega via DHL rastreada', en: 'Tracked DHL delivery', fr: 'Livraison DHL avec suivi' },
+                { pt: 'Garantia 100% satisfação', en: '100% satisfaction guarantee', fr: 'Garantie 100% satisfaction' },
               ].map(item => (
                 <li class="flex items-center gap-2.5 text-sm">
                   <span class="w-4 h-4 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-400 text-[10px] shrink-0">✓</span>
                   <span class="text-slate-300">
                     <span class="lang-pt">{item.pt}</span>
                     <span class="lang-en">{item.en}</span>
+                    <span class="lang-fr">{item.fr}</span>
                   </span>
                 </li>
               ))}
@@ -140,6 +148,7 @@ import Layout from '../layouts/Layout.astro';
             <h2 class="font-display font-bold text-2xl text-navy-900 mb-2">
               <span class="lang-pt">Envie uma Mensagem</span>
               <span class="lang-en">Send a Message</span>
+              <span class="lang-fr">Envoyez un Message</span>
             </h2>
             <p class="text-slate-500 text-sm mb-7">
               <span class="lang-pt">Descreva os produtos que você precisa e entraremos em contato com uma proposta.</span>
@@ -204,6 +213,7 @@ import Layout from '../layouts/Layout.astro';
                 class="w-full bg-navy-900 hover:bg-gold-500 text-white hover:text-navy-900 font-bold text-sm py-3.5 rounded-xl transition-all hover:-translate-y-0.5">
                 <span class="lang-pt">Enviar Mensagem</span>
                 <span class="lang-en">Send Message</span>
+                <span class="lang-fr">Envoyer le Message</span>
               </button>
 
               <!-- Success message -->
