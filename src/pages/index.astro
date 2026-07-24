@@ -7,46 +7,62 @@ const featured = products.filter(p => featuredIds.includes(p.id));
 <Layout title="Início" description="B3 Global — Importação e exportação de produtos brasileiros premium para o mundo. Fundada em 2006.">
 
   <!-- HERO -->
-  <section class="relative bg-navy-950 overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-gold-500/5 blur-3xl"></div>
-      <div class="absolute bottom-0 -left-32 w-96 h-96 rounded-full bg-blue-500/5 blur-3xl"></div>
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img
+        src="https://vermagmbh.com/wp-content/uploads/2022/09/wp2004328-cosmetics-wallpapers.jpg"
+        alt=""
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-navy-950/80"></div>
     </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40 text-center">
-      <div class="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 rounded-full px-4 py-1.5 mb-6">
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-28">
+      <div class="inline-flex items-center gap-2 bg-gold-500/15 border border-gold-500/40 rounded-full px-5 py-2 mb-8">
         <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
-        <span class="text-gold-400 text-xs font-semibold tracking-widest uppercase">
+        <span class="text-gold-400 text-xs font-semibold tracking-[0.2em] uppercase">
           <span class="lang-pt">Importação & Exportação Global</span>
           <span class="lang-en">Global Import & Export</span>
           <span class="lang-fr">Importation & Exportation Mondiale</span>
         </span>
       </div>
-      <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl text-white mb-6 tracking-tight leading-none">
-        B3 <span class="text-gold-500">Global</span>
+      <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6 tracking-tight leading-none uppercase">
+        WELCOME TO<br /><span class="text-gold-500">B3 GLOBAL</span>
       </h1>
-      <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-        <span class="lang-pt">Conectando os melhores produtos brasileiros ao Brasil e ao mundo. Qualidade premium, entrega internacional confiável.</span>
-        <span class="lang-en">Connecting the finest Brazilian products to the world. Premium quality, reliable international delivery.</span>
-        <span class="lang-fr">Connecter les meilleurs produits brésiliens au monde. Qualité premium, livraison internationale fiable.</span>
+      <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        <span class="lang-pt">Conectando os melhores produtos brasileiros ao mundo. Qualidade premium, entrega internacional confiável desde 2006.</span>
+        <span class="lang-en">Connecting the finest Brazilian products to the world. Premium quality, reliable international delivery since 2006.</span>
+        <span class="lang-fr">Connecter les meilleurs produits brésiliens au monde. Qualité premium, livraison internationale fiable depuis 2006.</span>
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-base px-8 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-gold-500/20">
+        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold-500/30">
           <span class="lang-pt">Ver Produtos</span>
           <span class="lang-en">Browse Products</span>
           <span class="lang-fr">Voir les Produits</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
         </a>
-        <a href="/about" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/40 text-white font-semibold text-base px-8 py-3.5 rounded-xl transition-all">
+        <a href="/about" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 text-white font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all">
           <span class="lang-pt">Sobre Nós</span>
-          <span class="lang-en">About Us</span>
-          <span class="lang-fr">À Propos</span>
+          <span class="lang-en">Know More About Us</span>
+          <span class="lang-fr">À Propos de Nous</span>
+        </a>
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 border border-white/20 hover:border-white/40 text-slate-300 hover:text-white font-semibold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all">
+          <span class="lang-pt">Contato</span>
+          <span class="lang-en">Contact Us</span>
+          <span class="lang-fr">Contactez-Nous</span>
         </a>
       </div>
     </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-40">
+      <div class="w-px h-10 bg-white/50"></div>
+      <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
   </section>
 
-  <!-- STATS -->
-  <section class="bg-navy-900 border-y border-white/5">
+  <!-- STATS BAR -->
+  <section class="bg-navy-900 border-b border-white/5">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
         {[
@@ -73,12 +89,17 @@ const featured = products.filter(p => featuredIds.includes(p.id));
   <section class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
+        <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+          <span class="lang-pt">O Que Oferecemos</span>
+          <span class="lang-en">What We Offer</span>
+          <span class="lang-fr">Ce Que Nous Offrons</span>
+        </p>
         <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900 mb-3">
           <span class="lang-pt">Nossas Categorias</span>
           <span class="lang-en">Our Categories</span>
           <span class="lang-fr">Nos Catégories</span>
         </h2>
-        <p class="text-slate-500 max-w-xl mx-auto">
+        <p class="text-slate-500 max-w-xl mx-auto text-sm">
           <span class="lang-pt">Amplo portfólio de produtos brasileiros premium para importação e exportação</span>
           <span class="lang-en">A broad portfolio of premium Brazilian products for import and export</span>
           <span class="lang-fr">Un large portefeuille de produits brésiliens premium pour l'importation et l'exportation</span>
@@ -94,6 +115,7 @@ const featured = products.filter(p => featuredIds.includes(p.id));
             <span class="font-semibold text-sm text-navy-800 group-hover:text-gold-600 transition-colors leading-tight">
               <span class="lang-pt">{cat.label_pt}</span>
               <span class="lang-en">{cat.label_en}</span>
+              <span class="lang-fr">{cat.label_fr}</span>
             </span>
           </a>
         ))}
@@ -106,19 +128,26 @@ const featured = products.filter(p => featuredIds.includes(p.id));
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
         <div>
+          <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-2">
+            <span class="lang-pt">Seleção Especial</span>
+            <span class="lang-en">Special Selection</span>
+            <span class="lang-fr">Sélection Spéciale</span>
+          </p>
           <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900 mb-2">
             <span class="lang-pt">Produtos em Destaque</span>
             <span class="lang-en">Featured Products</span>
             <span class="lang-fr">Produits en Vedette</span>
           </h2>
-          <p class="text-slate-500">
+          <p class="text-slate-500 text-sm">
             <span class="lang-pt">Seleção dos produtos mais procurados</span>
             <span class="lang-en">Our most sought-after product selection</span>
+            <span class="lang-fr">Notre sélection de produits les plus recherchés</span>
           </p>
         </div>
         <a href="/shop" class="shrink-0 inline-flex items-center gap-1.5 text-gold-600 hover:text-gold-700 font-semibold text-sm transition-colors">
           <span class="lang-pt">Ver todos</span>
           <span class="lang-en">View all</span>
+          <span class="lang-fr">Voir tout</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -139,6 +168,7 @@ const featured = products.filter(p => featuredIds.includes(p.id));
                   <span class="inline-block px-2 py-0.5 rounded-full text-[9px] font-semibold bg-navy-900/80 text-gold-400 uppercase tracking-wide">
                     <span class="lang-pt">{cat?.label_pt}</span>
                     <span class="lang-en">{cat?.label_en}</span>
+                    <span class="lang-fr">{cat?.label_fr}</span>
                   </span>
                 </div>
               </div>
@@ -148,6 +178,7 @@ const featured = products.filter(p => featuredIds.includes(p.id));
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                   <span class="lang-pt">Solicitar Cotação</span>
                   <span class="lang-en">Request Quote</span>
+                  <span class="lang-fr">Demander un Devis</span>
                 </a>
               </div>
             </div>
@@ -157,67 +188,149 @@ const featured = products.filter(p => featuredIds.includes(p.id));
     </div>
   </section>
 
-  <!-- ABOUT TEASER -->
-  <section class="py-20 bg-navy-950 text-white overflow-hidden relative">
-    <div class="absolute right-0 top-0 w-72 h-72 rounded-full bg-gold-500/5 blur-3xl pointer-events-none"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-14 items-center">
-        <div>
-          <div class="inline-block bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-5">
-            <span class="lang-pt">Sobre a Empresa</span>
-            <span class="lang-en">About the Company</span>
-          </div>
-          <h2 class="font-display font-bold text-3xl md:text-4xl mb-5 leading-tight">
-            <span class="lang-pt">Sua Parceira Global de Importação e Exportação</span>
-            <span class="lang-en">Your Global Import & Export Partner</span>
-          </h2>
-          <p class="text-slate-300 leading-relaxed mb-6">
-            <span class="lang-pt">A B3 Global nasceu com um propósito claro: exportar os melhores produtos brasileiros para o mundo. Com base no Brasil e filiais nos EUA e Canadá, oferecemos qualidade, confiança e excelência em cada transação.</span>
-            <span class="lang-en">B3 Global was born with a clear purpose: to export the finest Brazilian products to the world. Based in Brazil with subsidiaries in the USA and Canada, we offer quality, trust, and excellence in every transaction.</span>
-            <span class="lang-fr">B3 Global est née pour exporter les meilleurs produits brésiliens dans le monde entier. Basée au Brésil avec des filiales aux États-Unis et au Canada, nous offrons qualité, confiance et excellence.</span>
-          </p>
-          <ul class="space-y-2.5 mb-8">
-            {[
-              { pt: '6.000+ marcas reconhecidas', en: '6,000+ recognized brands' },
-              { pt: 'Entrega internacional via DHL', en: 'DHL international delivery' },
-              { pt: 'Suporte 24/7 multilíngue', en: '24/7 multilingual support' },
-              { pt: 'Garantia 100% satisfação', en: '100% satisfaction guarantee' },
-            ].map(item => (
-              <li class="flex items-center gap-2.5 text-sm">
-                <svg class="w-4 h-4 text-gold-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                <span class="text-slate-300">
-                  <span class="lang-pt">{item.pt}</span>
-                  <span class="lang-en">{item.en}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-          <a href="/about" class="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5">
-            <span class="lang-pt">Saiba Mais</span>
-            <span class="lang-en">Learn More</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-          {[
-            { icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>`, pt: 'Entrega Mundial', en: 'Worldwide Delivery', desc_pt: 'Enviamos para qualquer país do mundo', desc_en: 'We ship to any country worldwide' },
-            { icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>`, pt: 'Garantia Total', en: 'Full Guarantee', desc_pt: '100% de satisfação ou devolução', desc_en: '100% satisfaction or money back' },
-            { icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>`, pt: 'Preço Justo', en: 'Fair Pricing', desc_pt: 'Melhor preço com qualidade premium', desc_en: 'Best price with premium quality' },
-            { icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>`, pt: 'Embalagem Segura', en: 'Safe Packaging', desc_pt: 'Produtos protegidos para entrega perfeita', desc_en: 'Products protected for perfect delivery' },
-          ].map(b => (
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors">
-              <svg class="w-7 h-7 text-gold-500 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={b.icon}></svg>
-              <h4 class="font-display font-semibold text-white text-sm mb-1">
-                <span class="lang-pt">{b.pt}</span>
-                <span class="lang-en">{b.en}</span>
-              </h4>
-              <p class="text-slate-400 text-xs leading-relaxed">
-                <span class="lang-pt">{b.desc_pt}</span>
-                <span class="lang-en">{b.desc_en}</span>
-              </p>
+  <!-- ABOUT SECTION -->
+  <section class="py-24 bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
+        <span class="lang-pt">Quem Somos</span>
+        <span class="lang-en">Who We Are</span>
+        <span class="lang-fr">Qui Nous Sommes</span>
+      </p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900 mb-8 leading-tight">
+        <span class="lang-pt">Sua Parceira Global de Importação e Exportação</span>
+        <span class="lang-en">Your Global Import & Export Partner</span>
+        <span class="lang-fr">Votre Partenaire Mondial d'Importation et d'Exportation</span>
+      </h2>
+      <div class="w-16 h-0.5 bg-gold-500 mx-auto mb-8"></div>
+      <p class="text-slate-600 text-base leading-relaxed mb-6">
+        <span class="lang-pt">A B3 Global nasceu com um propósito claro: exportar os melhores produtos brasileiros para o mundo. Fundada em 2006, nossa empresa tem sede no Brasil e filiais nos Estados Unidos e Canadá, cobrindo os principais mercados globais com agilidade e confiança.</span>
+        <span class="lang-en">B3 Global was founded in 2006 with a clear purpose: to export the finest Brazilian products to the world. Headquartered in Brazil with subsidiaries in the United States and Canada, we cover the world's major markets with agility and reliability.</span>
+        <span class="lang-fr">B3 Global a été fondée en 2006 avec un objectif clair : exporter les meilleurs produits brésiliens dans le monde entier. Basée au Brésil, avec des filiales aux États-Unis et au Canada, nous couvrons les principaux marchés mondiaux avec agilité et fiabilité.</span>
+      </p>
+      <p class="text-slate-600 text-base leading-relaxed mb-10">
+        <span class="lang-pt">Com mais de 150 produtos em 10 categorias — de alimentos e cosméticos a suplementos e produtos de higiene — oferecemos qualidade premium, entrega via DHL e suporte multilíngue dedicado. Cada transação é acompanhada do nosso compromisso de 100% de satisfação.</span>
+        <span class="lang-en">With over 150 products across 10 categories — from food and cosmetics to supplements and hygiene — we offer premium quality, DHL delivery, and dedicated multilingual support. Every transaction is backed by our 100% satisfaction commitment.</span>
+        <span class="lang-fr">Avec plus de 150 produits dans 10 catégories — de l'alimentation aux cosmétiques en passant par les compléments alimentaires et l'hygiène — nous offrons une qualité premium, la livraison DHL et un support multilingue dédié. Chaque transaction est garantie à 100% de satisfaction.</span>
+      </p>
+      <a href="/about" class="inline-flex items-center gap-2 bg-navy-900 hover:bg-gold-500 text-white hover:text-navy-900 font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5">
+        <span class="lang-pt">Saiba Mais</span>
+        <span class="lang-en">Learn More About Us</span>
+        <span class="lang-fr">En Savoir Plus</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- BENEFITS STRIP -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+          <span class="lang-pt">Por Que Nos Escolher</span>
+          <span class="lang-en">Why Choose Us</span>
+          <span class="lang-fr">Pourquoi Nous Choisir</span>
+        </p>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900">
+          <span class="lang-pt">Nossas Vantagens</span>
+          <span class="lang-en">Our Advantages</span>
+          <span class="lang-fr">Nos Avantages</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        {[
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>`,
+            pt: 'Entrega Mundial', en: 'Worldwide Delivery', fr: 'Livraison Mondiale',
+            desc_pt: 'Enviamos para qualquer país', desc_en: 'We ship to any country', desc_fr: 'Nous livrons dans le monde entier'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>`,
+            pt: 'Ofertas Semanais', en: 'Weekly Deals', fr: 'Offres Hebdomadaires',
+            desc_pt: 'Promoções exclusivas toda semana', desc_en: 'Exclusive promotions every week', desc_fr: 'Promotions exclusives chaque semaine'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>`,
+            pt: 'Marcas Premium', en: 'Premium Brands', fr: 'Marques Premium',
+            desc_pt: 'Produtos das melhores marcas', desc_en: 'Products from the best brands', desc_fr: 'Produits des meilleures marques'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>`,
+            pt: 'Preço Competitivo', en: 'Fair Pricing', fr: 'Prix Compétitifs',
+            desc_pt: 'Melhor custo-benefício do mercado', desc_en: 'Best value in the market', desc_fr: 'Meilleur rapport qualité-prix'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>`,
+            pt: 'Entrega DHL', en: 'DHL Shipping', fr: 'Livraison DHL',
+            desc_pt: 'Rastreamento em tempo real', desc_en: 'Real-time tracking included', desc_fr: 'Suivi en temps réel inclus'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>`,
+            pt: 'Suporte Multilíngue', en: 'Multilingual Support', fr: 'Support Multilingue',
+            desc_pt: 'PT · EN · FR atendimento dedicado', desc_en: 'PT · EN · FR dedicated service', desc_fr: 'Service dédié PT · EN · FR'
+          },
+        ].map(b => (
+          <div class="flex flex-col items-center text-center p-6 rounded-2xl border border-slate-200 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-500/5 transition-all group">
+            <div class="w-14 h-14 rounded-2xl bg-navy-900 group-hover:bg-gold-500 flex items-center justify-center mb-4 transition-colors">
+              <svg class="w-7 h-7 text-gold-400 group-hover:text-navy-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={b.icon}></svg>
             </div>
-          ))}
-        </div>
+            <h4 class="font-display font-bold text-navy-900 text-sm mb-1.5">
+              <span class="lang-pt">{b.pt}</span>
+              <span class="lang-en">{b.en}</span>
+              <span class="lang-fr">{b.fr}</span>
+            </h4>
+            <p class="text-slate-500 text-xs leading-relaxed">
+              <span class="lang-pt">{b.desc_pt}</span>
+              <span class="lang-en">{b.desc_en}</span>
+              <span class="lang-fr">{b.desc_fr}</span>
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKGROUND IMAGE CTA -->
+  <section class="relative py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://vermagmbh.com/wp-content/uploads/2022/09/wp2004328-cosmetics-wallpapers.jpg"
+        alt=""
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-navy-950/85"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gold-400 text-xs font-semibold tracking-[0.2em] uppercase mb-5">
+        <span class="lang-pt">Solicite Sua Cotação</span>
+        <span class="lang-en">Request Your Quote</span>
+        <span class="lang-fr">Demandez Votre Devis</span>
+      </p>
+      <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white mb-6 uppercase leading-tight tracking-tight">
+        <span class="lang-pt">SOLICITE SUA COTAÇÃO HOJE E APROVEITE PREÇOS COMPETITIVOS EM PRODUTOS BRASILEIROS PREMIUM</span>
+        <span class="lang-en">REQUEST YOUR QUOTE TODAY AND ENJOY COMPETITIVE PRICING ON PREMIUM BRAZILIAN PRODUCTS</span>
+        <span class="lang-fr">DEMANDEZ VOTRE DEVIS AUJOURD'HUI ET PROFITEZ DE PRIX COMPÉTITIFS SUR DES PRODUITS BRÉSILIENS PREMIUM</span>
+      </h2>
+      <p class="text-slate-300 text-base mb-10 max-w-2xl mx-auto">
+        <span class="lang-pt">Nossa equipe especializada está pronta para montar a proposta ideal para sua necessidade de importação ou exportação.</span>
+        <span class="lang-en">Our specialist team is ready to build the perfect proposal for your import or export needs.</span>
+        <span class="lang-fr">Notre équipe spécialisée est prête à construire la proposition idéale pour vos besoins d'importation ou d'exportation.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold-500/30">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span class="lang-pt">Solicitar Cotação</span>
+          <span class="lang-en">Request a Quote</span>
+          <span class="lang-fr">Demander un Devis</span>
+        </a>
+        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all">
+          <span class="lang-pt">Ver Catálogo</span>
+          <span class="lang-en">Browse Catalog</span>
+          <span class="lang-fr">Voir le Catalogue</span>
+        </a>
+        <a href="https://wa.me/5511953954562" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.401 5.605L0 24l6.604-1.375A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.868-1.292l-.35-.208-3.621.754.766-3.53-.228-.362A9.818 9.818 0 1112 21.818z"/></svg>
+          WhatsApp
+        </a>
       </div>
     </div>
   </section>
@@ -226,28 +339,35 @@ const featured = products.filter(p => featuredIds.includes(p.id));
   <section class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
+        <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
+          <span class="lang-pt">Depoimentos</span>
+          <span class="lang-en">Testimonials</span>
+          <span class="lang-fr">Témoignages</span>
+        </p>
         <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900 mb-3">
           <span class="lang-pt">O Que Dizem Nossos Clientes</span>
           <span class="lang-en">What Our Clients Say</span>
+          <span class="lang-fr">Ce Que Disent Nos Clients</span>
         </h2>
-        <p class="text-slate-500">
+        <p class="text-slate-500 text-sm">
           <span class="lang-pt">Confiança construída através de anos de excelência</span>
           <span class="lang-en">Trust built through years of excellence</span>
+          <span class="lang-fr">La confiance construite au fil des années d'excellence</span>
         </p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { name: 'Carlos M.', role_pt: 'Importador, São Paulo', role_en: 'Importer, São Paulo', text_pt: 'Excelente parceiro comercial. Produtos de alta qualidade, entrega pontual e suporte impecável. Recomendo fortemente.', text_en: 'Excellent business partner. High-quality products, on-time delivery, and impeccable support. Highly recommended.' },
-          { name: 'Ana Lima', role_pt: 'Distribuidora, Rio de Janeiro', role_en: 'Distributor, Rio de Janeiro', text_pt: 'Trabalho com a B3 Global há anos. Sempre cumprem o que prometem. Embalagem cuidadosa e produtos autênticos.', text_en: "I've worked with B3 Global for years. They always deliver on their promises. Careful packaging and authentic products." },
-          { name: 'Roberto F.', role_pt: 'Atacadista, Curitiba', role_en: 'Wholesaler, Curitiba', text_pt: 'Preços competitivos e variedade impressionante de produtos brasileiros. Meu fornecedor preferido para exportações.', text_en: 'Competitive prices and an impressive variety of Brazilian products. My preferred supplier for exports.' },
-          { name: 'Mariana S.', role_pt: 'Empresária, Belo Horizonte', role_en: 'Business Owner, BH', text_pt: 'Atendimento rápido e profissional. Os produtos chegaram perfeitos e dentro do prazo. Voltarei a comprar com certeza.', text_en: 'Fast and professional service. Products arrived perfectly and on time. I will definitely buy again.' },
+          { name: 'Carlos M.', role_pt: 'Importador, São Paulo', role_en: 'Importer, São Paulo', role_fr: 'Importateur, São Paulo', text_pt: 'Excelente parceiro comercial. Produtos de alta qualidade, entrega pontual e suporte impecável. Recomendo fortemente.', text_en: 'Excellent business partner. High-quality products, on-time delivery, and impeccable support. Highly recommended.', text_fr: 'Excellent partenaire commercial. Produits de haute qualité, livraison ponctuelle et support impeccable. Je recommande vivement.' },
+          { name: 'Ana Lima', role_pt: 'Distribuidora, Rio de Janeiro', role_en: 'Distributor, Rio de Janeiro', role_fr: 'Distributrice, Rio de Janeiro', text_pt: 'Trabalho com a B3 Global há anos. Sempre cumprem o que prometem. Embalagem cuidadosa e produtos autênticos.', text_en: "I've worked with B3 Global for years. They always deliver on their promises. Careful packaging and authentic products.", text_fr: "Je travaille avec B3 Global depuis des années. Ils tiennent toujours leurs promesses. Emballage soigné et produits authentiques." },
+          { name: 'Roberto F.', role_pt: 'Atacadista, Curitiba', role_en: 'Wholesaler, Curitiba', role_fr: 'Grossiste, Curitiba', text_pt: 'Preços competitivos e variedade impressionante de produtos brasileiros. Meu fornecedor preferido para exportações.', text_en: 'Competitive prices and an impressive variety of Brazilian products. My preferred supplier for exports.', text_fr: 'Prix compétitifs et variété impressionnante de produits brésiliens. Mon fournisseur préféré pour les exportations.' },
+          { name: 'Mariana S.', role_pt: 'Empresária, Belo Horizonte', role_en: 'Business Owner, BH', role_fr: 'Cheffe d\'entreprise, BH', text_pt: 'Atendimento rápido e profissional. Os produtos chegaram perfeitos e dentro do prazo. Voltarei a comprar com certeza.', text_en: 'Fast and professional service. Products arrived perfectly and on time. I will definitely buy again.', text_fr: 'Service rapide et professionnel. Les produits sont arrivés parfaits et dans les délais. Je rachèterai certainement.' },
         ].map(t => (
           <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col">
-            <!-- Quote icon -->
             <svg class="w-6 h-6 text-gold-400 mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
             <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">
               <span class="lang-pt">{t.text_pt}</span>
               <span class="lang-en">{t.text_en}</span>
+              <span class="lang-fr">{t.text_fr}</span>
             </p>
             <div class="flex items-center gap-3 border-t border-slate-100 pt-4">
               <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center font-display font-bold text-gold-400 text-xs shrink-0">
@@ -258,36 +378,12 @@ const featured = products.filter(p => featuredIds.includes(p.id));
                 <div class="text-slate-500 text-xs">
                   <span class="lang-pt">{t.role_pt}</span>
                   <span class="lang-en">{t.role_en}</span>
+                  <span class="lang-fr">{t.role_fr}</span>
                 </div>
               </div>
             </div>
           </div>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA BANNER -->
-  <section class="py-16 bg-gold-500">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mb-4">
-        <span class="lang-pt">Pronto para Importar com Qualidade?</span>
-        <span class="lang-en">Ready to Import with Quality?</span>
-      </h2>
-      <p class="text-navy-800 text-base mb-8 max-w-xl mx-auto">
-        <span class="lang-pt">Entre em contato e receba uma cotação personalizada para os produtos que você precisa.</span>
-        <span class="lang-en">Get in touch and receive a personalized quote for the products you need.</span>
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-bold text-base px-8 py-3.5 rounded-xl transition-all hover:-translate-y-0.5">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <span class="lang-pt">Solicitar Cotação</span>
-          <span class="lang-en">Request a Quote</span>
-        </a>
-        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/30 hover:bg-white/50 text-navy-900 font-semibold text-base px-8 py-3.5 rounded-xl transition-all">
-          <span class="lang-pt">Ver Catálogo</span>
-          <span class="lang-en">View Catalog</span>
-        </a>
       </div>
     </div>
   </section>
