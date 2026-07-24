@@ -80,15 +80,20 @@ const benefits = [
 <Layout title="Sobre" description="Conheça a B3 Global — empresa de importação e exportação de produtos brasileiros premium, fundada em 2006.">
 
   <!-- HEADER -->
-  <section class="bg-navy-950 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-gold-400 text-xs font-semibold tracking-widest uppercase mb-3">B3 Global</p>
-      <h1 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+  <section class="relative py-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://vermagmbh.com/wp-content/uploads/2022/09/banner3-1.jpg" alt="" class="w-full h-full object-cover object-center" onerror="this.parentElement.style.backgroundColor='#2D3A4B';" />
+      <div class="absolute inset-0" style="background-color:#00000085;"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gold-500 text-xs font-semibold tracking-widest uppercase mb-3">B3 Global</p>
+      <h1 class="font-display font-extrabold text-4xl md:text-5xl text-white mb-4 uppercase">
         <span class="lang-pt">Sobre a B3 Global</span>
         <span class="lang-en">About B3 Global</span>
         <span class="lang-fr">À Propos de B3 Global</span>
       </h1>
-      <p class="text-slate-400 text-base max-w-xl mx-auto">
+      <div class="w-16 h-1 mx-auto mb-4" style="background-color:#FC0303;"></div>
+      <p class="text-gray-300 text-base max-w-xl mx-auto">
         <span class="lang-pt">Sua parceira de importação e exportação de confiança desde 2006</span>
         <span class="lang-en">Your trusted import & export partner since 2006</span>
         <span class="lang-fr">Votre partenaire de confiance en import-export depuis 2006</span>
@@ -101,16 +106,17 @@ const benefits = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <div class="inline-block bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-5">
+          <p class="text-xs font-semibold tracking-widest uppercase mb-2" style="color:#FC0303;">
             <span class="lang-pt">Nossa História</span>
             <span class="lang-en">Our Story</span>
             <span class="lang-fr">Notre Histoire</span>
-          </div>
-          <h2 class="font-display font-bold text-3xl text-navy-900 mb-5">
+          </p>
+          <h2 class="font-display font-extrabold text-3xl uppercase mb-2" style="color:#041121;">
             <span class="lang-pt">Conectando Mercados Desde 2006</span>
             <span class="lang-en">Connecting Markets Since 2006</span>
             <span class="lang-fr">Connecter les Marchés Depuis 2006</span>
           </h2>
+          <div class="w-12 h-1 mb-5" style="background-color:#FC0303;"></div>
           <div class="space-y-4 text-slate-600 text-base leading-relaxed">
             <p>
               <span class="lang-pt">A B3 Global Importação e Exportação nasceu em 2006 com um propósito claro: conectar os melhores produtos brasileiros ao mercado mundial. Com sede no Brasil e operações subsidiárias nos EUA e Canadá, construímos uma rede sólida de fornecedores e parceiros que nos permite oferecer produtos de alta qualidade com preços competitivos.</span>
@@ -131,10 +137,10 @@ const benefits = [
             { num: '6K+',  label_pt: 'Marcas Reconhecidas', label_en: 'Recognized Brands', label_fr: 'Marques Reconnues', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>` },
             { num: '2006', label_pt: 'Ano de Fundação', label_en: 'Year Founded', label_fr: 'Année de Fondation', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>` },
           ].map(s => (
-            <div class="bg-navy-950 rounded-2xl p-6 text-center">
-              <svg class="w-5 h-5 text-gold-500/50 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={s.icon}></svg>
-              <div class="font-display font-extrabold text-3xl text-gold-500 mb-1">{s.num}</div>
-              <div class="text-slate-400 text-xs leading-tight">
+            <div class="rounded-lg p-6 text-center" style="background-color:#2D3A4B;">
+              <svg class="w-5 h-5 mx-auto mb-2" style="color:#F6AC06;opacity:0.6;" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={s.icon}></svg>
+              <div class="font-display font-extrabold text-3xl mb-1" style="color:#F6AC06;">{s.num}</div>
+              <div class="text-gray-400 text-xs leading-tight">
                 <span class="lang-pt">{s.label_pt}</span>
                 <span class="lang-en">{s.label_en}</span>
                 <span class="lang-fr">{s.label_fr}</span>
@@ -147,15 +153,16 @@ const benefits = [
   </section>
 
   <!-- MISSION -->
-  <section class="py-20 bg-slate-50">
+  <section class="py-20" style="background-color:#f5f5f5;">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <div class="inline-block bg-navy-900/10 border border-navy-900/20 text-navy-800 text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-6">
+      <p class="text-xs font-semibold tracking-widest uppercase mb-4" style="color:#FC0303;">
         <span class="lang-pt">Nossa Missão</span>
         <span class="lang-en">Our Mission</span>
         <span class="lang-fr">Notre Mission</span>
-      </div>
-      <svg class="w-8 h-8 text-gold-400 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-      <blockquote class="font-display font-bold text-2xl md:text-3xl text-navy-900 leading-snug">
+      </p>
+      <div class="w-12 h-1 mx-auto mb-6" style="background-color:#FC0303;"></div>
+      <svg class="w-8 h-8 mx-auto mb-4" fill="currentColor" style="color:#F6AC06;" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+      <blockquote class="font-display font-bold text-2xl md:text-3xl leading-snug" style="color:#041121;">
         <span class="lang-pt">"Ser a ponte confiável entre produtores brasileiros e clientes no mundo, garantindo qualidade, transparência e excelência em cada transação."</span>
         <span class="lang-en">"To be the trusted bridge between Brazilian producers and clients worldwide, ensuring quality, transparency, and excellence in every transaction."</span>
         <span class="lang-fr">"Être le pont de confiance entre les producteurs brésiliens et les clients du monde entier, en garantissant qualité, transparence et excellence dans chaque transaction."</span>
@@ -167,12 +174,13 @@ const benefits = [
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="font-display font-bold text-3xl text-navy-900 mb-3">
+        <h2 class="font-display font-extrabold text-3xl uppercase mb-3" style="color:#041121;">
           <span class="lang-pt">Nossos Valores</span>
           <span class="lang-en">Our Values</span>
           <span class="lang-fr">Nos Valeurs</span>
         </h2>
-        <p class="text-slate-500 max-w-xl mx-auto text-sm">
+        <div class="w-16 h-1 mx-auto mb-3" style="background-color:#FC0303;"></div>
+        <p class="text-gray-500 max-w-xl mx-auto text-sm">
           <span class="lang-pt">Os pilares que guiam cada decisão e transação na B3 Global</span>
           <span class="lang-en">The pillars that guide every decision and transaction at B3 Global</span>
           <span class="lang-fr">Les piliers qui guident chaque décision et transaction chez B3 Global</span>
@@ -180,11 +188,11 @@ const benefits = [
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {values.map(v => (
-          <div class="bg-slate-50 border border-slate-200 rounded-2xl p-7 hover:border-gold-400 hover:shadow-lg transition-all group">
-            <div class="w-12 h-12 bg-navy-900 group-hover:bg-gold-500 rounded-xl flex items-center justify-center mb-5 transition-colors">
-              <svg class="w-6 h-6 text-gold-400 group-hover:text-navy-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={v.icon}></svg>
+          <div class="border border-gray-200 rounded-lg p-7 hover:shadow-md transition-all group" style="background-color:#f5f5f5;">
+            <div class="w-12 h-12 rounded flex items-center justify-center mb-5 transition-colors" style="background-color:#2D3A4B;">
+              <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={v.icon}></svg>
             </div>
-            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">
+            <h3 class="font-display font-bold text-lg mb-2" style="color:#2D3A4B;">
               <span class="lang-pt">{v.title_pt}</span>
               <span class="lang-en">{v.title_en}</span>
               <span class="lang-fr">{v.title_fr}</span>
@@ -201,15 +209,16 @@ const benefits = [
   </section>
 
   <!-- WHY B3 -->
-  <section class="py-20 bg-navy-950 text-white">
+  <section class="py-20 text-white" style="background-color:#2D3A4B;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <h2 class="font-display font-bold text-3xl md:text-4xl mb-3">
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl mb-3 uppercase">
           <span class="lang-pt">Por Que Escolher a B3 Global?</span>
           <span class="lang-en">Why Choose B3 Global?</span>
           <span class="lang-fr">Pourquoi Choisir B3 Global ?</span>
         </h2>
-        <p class="text-slate-400 max-w-xl mx-auto text-sm">
+        <div class="w-16 h-1 mx-auto mb-3" style="background-color:#FC0303;"></div>
+        <p class="text-gray-400 max-w-xl mx-auto text-sm">
           <span class="lang-pt">Diferenciais que tornam a B3 Global sua melhor escolha no comércio internacional</span>
           <span class="lang-en">The differentials that make B3 Global your best choice in international trade</span>
           <span class="lang-fr">Les différentiels qui font de B3 Global votre meilleur choix dans le commerce international</span>
@@ -217,9 +226,9 @@ const benefits = [
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {benefits.map(b => (
-          <div class="flex gap-4 bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
-            <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center shrink-0">
-              <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={b.icon}></svg>
+          <div class="flex gap-4 rounded-lg p-6 hover:bg-white/10 transition-colors border border-white/10" style="background-color:rgba(255,255,255,0.05);">
+            <div class="w-10 h-10 rounded flex items-center justify-center shrink-0" style="background-color:rgba(246,172,6,0.15); border:1px solid rgba(246,172,6,0.3);">
+              <svg class="w-5 h-5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={b.icon}></svg>
             </div>
             <div>
               <h3 class="font-display font-semibold text-white text-sm mb-1">
@@ -240,25 +249,26 @@ const benefits = [
   </section>
 
   <!-- CTA -->
-  <section class="py-14 bg-gold-500 text-center">
+  <section class="py-14 text-center" style="background-color:#F6AC06;">
     <div class="max-w-2xl mx-auto px-4">
-      <h2 class="font-display font-bold text-2xl text-navy-900 mb-3">
+      <h2 class="font-display font-extrabold text-2xl uppercase mb-3" style="color:#041121;">
         <span class="lang-pt">Comece uma Parceria Agora</span>
         <span class="lang-en">Start a Partnership Now</span>
         <span class="lang-fr">Démarrez un Partenariat Maintenant</span>
       </h2>
-      <p class="text-navy-800 text-sm mb-6">
+      <div class="w-12 h-1 mx-auto mb-4" style="background-color:#FC0303;"></div>
+      <p class="text-sm mb-6" style="color:#162230;">
         <span class="lang-pt">Entre em contato com nossa equipe e descubra como a B3 Global pode impulsionar seu negócio.</span>
         <span class="lang-en">Get in touch with our team and discover how B3 Global can boost your business.</span>
         <span class="lang-fr">Contactez notre équipe et découvrez comment B3 Global peut booster votre entreprise.</span>
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-bold text-sm px-7 py-3 rounded-xl transition-all">
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white font-bold text-sm px-7 py-3 rounded uppercase tracking-wide transition-all" style="background-color:#2D3A4B;">
           <span class="lang-pt">Entrar em Contato</span>
           <span class="lang-en">Get in Touch</span>
           <span class="lang-fr">Prendre Contact</span>
         </a>
-        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 text-navy-900 font-semibold text-sm px-7 py-3 rounded-xl transition-all">
+        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white font-bold text-sm px-7 py-3 rounded uppercase tracking-wide transition-all" style="background-color:#2E8D08;">
           <span class="lang-pt">Ver Produtos</span>
           <span class="lang-en">View Products</span>
           <span class="lang-fr">Voir les Produits</span>

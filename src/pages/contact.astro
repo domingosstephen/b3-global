@@ -4,15 +4,20 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Contato" description="Entre em contato com a B3 Global — solicite cotações, informações sobre produtos e parcerias comerciais.">
 
   <!-- PAGE HEADER -->
-  <section class="bg-navy-950 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-gold-400 text-xs font-semibold tracking-widest uppercase mb-3">B3 Global</p>
-      <h1 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+  <section class="relative py-20 overflow-hidden">
+    <div class="absolute inset-0" style="background-color:#2D3A4B;"></div>
+    <div class="absolute inset-0 opacity-10">
+      <img src="https://vermagmbh.com/wp-content/uploads/2022/09/wp2004328-cosmetics-wallpapers.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gold-500 text-xs font-semibold tracking-widest uppercase mb-3">B3 Global</p>
+      <h1 class="font-display font-extrabold text-4xl md:text-5xl text-white mb-3 uppercase">
         <span class="lang-pt">Entre em Contato</span>
         <span class="lang-en">Get In Touch</span>
         <span class="lang-fr">Contactez-Nous</span>
       </h1>
-      <p class="text-slate-400 text-base max-w-xl mx-auto">
+      <div class="w-16 h-1 mx-auto mb-4" style="background-color:#FC0303;"></div>
+      <p class="text-gray-300 text-base max-w-xl mx-auto">
         <span class="lang-pt">Pronto para iniciar uma parceria? Nossa equipe responde em até 24 horas.</span>
         <span class="lang-en">Ready to start a partnership? Our team responds within 24 hours.</span>
         <span class="lang-fr">Prêt à démarrer un partenariat ? Notre équipe répond en moins de 24 heures.</span>
@@ -21,7 +26,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- MAIN CONTENT -->
-  <section class="py-20 bg-slate-50">
+  <section class="py-20" style="background-color:#f5f5f5;">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-5 gap-12">
 
@@ -115,8 +120,8 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <!-- Guarantees -->
-          <div class="bg-navy-950 rounded-2xl p-6">
-            <h3 class="font-display font-semibold text-white text-sm mb-4">
+          <div class="rounded-lg p-6" style="background-color:#2D3A4B;">
+            <h3 class="font-display font-bold text-white text-sm mb-4 uppercase tracking-wide">
               <span class="lang-pt">Nossas Garantias</span>
               <span class="lang-en">Our Guarantees</span>
               <span class="lang-fr">Nos Garanties</span>
@@ -210,7 +215,7 @@ import Layout from '../layouts/Layout.astro';
 
               <!-- Submit -->
               <button type="submit"
-                class="w-full bg-navy-900 hover:bg-gold-500 text-white hover:text-navy-900 font-bold text-sm py-3.5 rounded-xl transition-all hover:-translate-y-0.5">
+                class="w-full text-white font-bold text-sm py-3.5 rounded uppercase tracking-wide transition-all" style="background-color:#2E8D08;">
                 <span class="lang-pt">Enviar Mensagem</span>
                 <span class="lang-en">Send Message</span>
                 <span class="lang-fr">Envoyer le Message</span>

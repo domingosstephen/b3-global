@@ -6,100 +6,56 @@ const featured = products.filter(p => featuredIds.includes(p.id));
 ---
 <Layout title="Início" description="B3 Global — Importação e exportação de produtos brasileiros premium para o mundo. Fundada em 2006.">
 
-  <!-- HERO -->
-  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
-    <!-- Background image -->
+  <!-- HERO (full-bleed slider-style, bg image + dark overlay) -->
+  <section class="relative h-[500px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0">
       <img
         src="https://vermagmbh.com/wp-content/uploads/2022/09/wp2004328-cosmetics-wallpapers.jpg"
         alt=""
         class="w-full h-full object-cover object-center"
       />
-      <div class="absolute inset-0 bg-navy-950/80"></div>
+      <div class="absolute inset-0" style="background-color:#00000085;"></div>
     </div>
-    <!-- Content -->
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-28">
-      <div class="inline-flex items-center gap-2 bg-gold-500/15 border border-gold-500/40 rounded-full px-5 py-2 mb-8">
-        <span class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"></span>
-        <span class="text-gold-400 text-xs font-semibold tracking-[0.2em] uppercase">
-          <span class="lang-pt">Importação & Exportação Global</span>
-          <span class="lang-en">Global Import & Export</span>
-          <span class="lang-fr">Importation & Exportation Mondiale</span>
-        </span>
-      </div>
-      <h1 class="font-display font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white mb-6 tracking-tight leading-none uppercase">
-        WELCOME TO<br /><span class="text-gold-500">B3 GLOBAL</span>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl text-white mb-5 uppercase tracking-tight leading-tight">
+        WELCOME TO <span style="color:#F6AC06;">B3 GLOBAL</span>
       </h1>
-      <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-        <span class="lang-pt">Conectando os melhores produtos brasileiros ao mundo. Qualidade premium, entrega internacional confiável desde 2006.</span>
-        <span class="lang-en">Connecting the finest Brazilian products to the world. Premium quality, reliable international delivery since 2006.</span>
-        <span class="lang-fr">Connecter les meilleurs produits brésiliens au monde. Qualité premium, livraison internationale fiable depuis 2006.</span>
+      <p class="text-gray-200 text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+        <span class="lang-pt">Conectando os melhores produtos brasileiros ao mundo desde 2006. Qualidade premium, entrega internacional confiável.</span>
+        <span class="lang-en">Connecting the finest Brazilian products to the world since 2006. Premium quality, reliable international delivery.</span>
+        <span class="lang-fr">Les meilleurs produits brésiliens au monde depuis 2006. Qualité premium, livraison internationale fiable.</span>
       </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold-500/30">
-          <span class="lang-pt">Ver Produtos</span>
-          <span class="lang-en">Browse Products</span>
-          <span class="lang-fr">Voir les Produits</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/about" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-sm uppercase tracking-widest px-8 py-3.5 rounded transition-all" style="background-color:#2D3A4B; color:white;">
+          <span class="lang-pt">Saiba Mais</span>
+          <span class="lang-en">KNOW MORE ABOUT US</span>
+          <span class="lang-fr">EN SAVOIR PLUS</span>
         </a>
-        <a href="/about" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 text-white font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all">
-          <span class="lang-pt">Sobre Nós</span>
-          <span class="lang-en">Know More About Us</span>
-          <span class="lang-fr">À Propos de Nous</span>
+        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-sm uppercase tracking-widest px-8 py-3.5 rounded transition-all" style="background-color:#2E8D08; color:white;">
+          <span class="lang-pt">VER PRODUTOS</span>
+          <span class="lang-en">START SHOPPING NOW</span>
+          <span class="lang-fr">VOIR LES PRODUITS</span>
         </a>
-        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 border border-white/20 hover:border-white/40 text-slate-300 hover:text-white font-semibold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all">
-          <span class="lang-pt">Contato</span>
-          <span class="lang-en">Contact Us</span>
-          <span class="lang-fr">Contactez-Nous</span>
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-sm uppercase tracking-widest px-8 py-3.5 rounded transition-all border border-white/40 text-white hover:bg-white/10">
+          <span class="lang-pt">CONTATO</span>
+          <span class="lang-en">CONTACT US</span>
+          <span class="lang-fr">CONTACTEZ-NOUS</span>
         </a>
-      </div>
-    </div>
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-40">
-      <div class="w-px h-10 bg-white/50"></div>
-      <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-    </div>
-  </section>
-
-  <!-- STATS BAR -->
-  <section class="bg-navy-900 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-        {[
-          { num: '150+', label_pt: 'Produtos', label_en: 'Products', label_fr: 'Produits', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>` },
-          { num: '10',   label_pt: 'Categorias', label_en: 'Categories', label_fr: 'Catégories', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>` },
-          { num: 'DHL',  label_pt: 'Entrega Mundial', label_en: 'Worldwide Delivery', label_fr: 'Livraison Mondiale', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>` },
-          { num: '2006', label_pt: 'Ano de Fundação', label_en: 'Year Founded', label_fr: 'Année de Fondation', icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>` },
-        ].map(s => (
-          <div class="flex flex-col items-center justify-center py-8 px-4 gap-2 text-center">
-            <svg class="w-5 h-5 text-gold-500/60" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={s.icon}></svg>
-            <span class="font-display font-extrabold text-2xl text-gold-500">{s.num}</span>
-            <span class="text-slate-400 text-xs">
-              <span class="lang-pt">{s.label_pt}</span>
-              <span class="lang-en">{s.label_en}</span>
-              <span class="lang-fr">{s.label_fr}</span>
-            </span>
-          </div>
-        ))}
       </div>
     </div>
   </section>
 
-  <!-- CATEGORIES -->
-  <section class="py-20 bg-slate-50">
+  <!-- OUR CATEGORIES -->
+  <section class="py-14" style="background-color:#f5f5f5;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
-          <span class="lang-pt">O Que Oferecemos</span>
-          <span class="lang-en">What We Offer</span>
-          <span class="lang-fr">Ce Que Nous Offrons</span>
-        </p>
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900 mb-3">
-          <span class="lang-pt">Nossas Categorias</span>
-          <span class="lang-en">Our Categories</span>
-          <span class="lang-fr">Nos Catégories</span>
+      <div class="text-center mb-10">
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl uppercase mb-3" style="color:#041121;">
+          <span class="lang-pt">NOSSAS CATEGORIAS</span>
+          <span class="lang-en">OUR CATEGORIES</span>
+          <span class="lang-fr">NOS CATÉGORIES</span>
         </h2>
-        <p class="text-slate-500 max-w-xl mx-auto text-sm">
+        <div class="w-16 h-1 mx-auto" style="background-color:#FC0303;"></div>
+        <p class="text-gray-500 mt-4 text-sm max-w-xl mx-auto">
           <span class="lang-pt">Amplo portfólio de produtos brasileiros premium para importação e exportação</span>
           <span class="lang-en">A broad portfolio of premium Brazilian products for import and export</span>
           <span class="lang-fr">Un large portefeuille de produits brésiliens premium pour l'importation et l'exportation</span>
@@ -108,11 +64,11 @@ const featured = products.filter(p => featuredIds.includes(p.id));
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {categories.map(cat => (
           <a href={`/shop?cat=${cat.id}`}
-             class="group flex flex-col items-center gap-3 p-5 bg-white rounded-2xl border border-slate-200 hover:border-gold-400 hover:shadow-lg hover:shadow-gold-500/10 transition-all hover:-translate-y-1 text-center">
-            <div class="w-12 h-12 rounded-xl bg-navy-900 group-hover:bg-gold-500 flex items-center justify-center transition-colors">
-              <svg class="w-6 h-6 text-gold-400 group-hover:text-navy-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={categoryIcons[cat.id]}></svg>
+             class="group flex flex-col items-center gap-3 p-5 bg-white rounded-lg border border-gray-200 hover:border-gray-400 hover:shadow-md transition-all text-center">
+            <div class="w-12 h-12 rounded flex items-center justify-center transition-colors" style="background-color:#2D3A4B;">
+              <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={categoryIcons[cat.id]}></svg>
             </div>
-            <span class="font-semibold text-sm text-navy-800 group-hover:text-gold-600 transition-colors leading-tight">
+            <span class="font-semibold text-sm leading-tight transition-colors" style="color:#2D3A4B;">
               <span class="lang-pt">{cat.label_pt}</span>
               <span class="lang-en">{cat.label_en}</span>
               <span class="lang-fr">{cat.label_fr}</span>
@@ -123,49 +79,144 @@ const featured = products.filter(p => featuredIds.includes(p.id));
     </div>
   </section>
 
-  <!-- FEATURED PRODUCTS -->
-  <section class="py-20 bg-white">
+  <!-- CTA BANNER (bg image + dark overlay, "PLACE YOUR ORDER TODAY") -->
+  <section class="relative py-24 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://vermagmbh.com/wp-content/uploads/2022/09/banner2-1.jpg"
+        alt=""
+        class="w-full h-full object-cover object-center"
+        onerror="this.src='https://vermagmbh.com/wp-content/uploads/2022/09/wp2004328-cosmetics-wallpapers.jpg'"
+      />
+      <div class="absolute inset-0" style="background-color:#00000085;"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display font-extrabold text-3xl md:text-5xl text-white uppercase leading-tight mb-6 tracking-tight">
+        <span class="lang-pt">" FAÇA SEU PEDIDO HOJE E APROVEITE NOSSO PLANO DE DESCONTOS CONTÍNUO "</span>
+        <span class="lang-en">" PLACE YOUR ORDER TODAY AND ENJOY FROM OUR ONGOING DISCOUNT PLAN "</span>
+        <span class="lang-fr">" PASSEZ VOTRE COMMANDE AUJOURD'HUI ET PROFITEZ DE NOTRE PLAN DE REMISES EN COURS "</span>
+      </h2>
+      <p class="text-gray-300 text-base mb-8 max-w-2xl mx-auto">
+        <span class="lang-pt">Produtos brasileiros premium com preços competitivos e entrega via DHL rastreada para qualquer lugar do mundo.</span>
+        <span class="lang-en">Premium Brazilian products at competitive prices with tracked DHL delivery anywhere in the world.</span>
+        <span class="lang-fr">Produits brésiliens premium à des prix compétitifs avec livraison DHL suivie partout dans le monde.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-sm uppercase tracking-widest px-8 py-3.5 rounded transition-all" style="background-color:#BA1404; color:white;">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span class="lang-pt">SOLICITAR COTAÇÃO</span>
+          <span class="lang-en">REQUEST A QUOTE</span>
+          <span class="lang-fr">DEMANDER UN DEVIS</span>
+        </a>
+        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-sm uppercase tracking-widest px-8 py-3.5 rounded transition-all" style="background-color:#2E8D08; color:white;">
+          <span class="lang-pt">VER CATÁLOGO</span>
+          <span class="lang-en">BROWSE CATALOG</span>
+          <span class="lang-fr">VOIR LE CATALOGUE</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="py-14 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+      <div class="text-center mb-10">
+        <h2 class="font-display font-extrabold text-2xl md:text-3xl uppercase mb-3" style="color:#041121;">
+          <span class="lang-pt">Oferecemos os seguintes benefícios</span>
+          <span class="lang-en">We provide you the following benefits</span>
+          <span class="lang-fr">Nous vous offrons les avantages suivants</span>
+        </h2>
+        <div class="w-16 h-1 mx-auto" style="background-color:#FC0303;"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>`,
+            pt: 'Entrega Mundial', en: 'Worldwide Delivery', fr: 'Livraison Mondiale',
+            desc_pt: 'Enviamos para qualquer país do mundo com rastreamento completo.', desc_en: 'We ship to any country in the world with full tracking.', desc_fr: 'Nous livrons dans n\'importe quel pays avec un suivi complet.'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>`,
+            pt: 'Ofertas Semanais', en: 'Weekly Deals', fr: 'Offres Hebdomadaires',
+            desc_pt: 'Promoções exclusivas toda semana nos melhores produtos brasileiros.', desc_en: 'Exclusive promotions every week on the best Brazilian products.', desc_fr: 'Promotions exclusives chaque semaine sur les meilleurs produits brésiliens.'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>`,
+            pt: 'Marcas Premium', en: 'Premium Brands', fr: 'Marques Premium',
+            desc_pt: 'Mais de 150 produtos das melhores marcas brasileiras.', desc_en: 'Over 150 products from the best Brazilian brands.', desc_fr: 'Plus de 150 produits des meilleures marques brésiliennes.'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>`,
+            pt: 'Preço Competitivo', en: 'Fair Pricing', fr: 'Prix Compétitifs',
+            desc_pt: 'Cotações personalizadas com o melhor custo-benefício do mercado.', desc_en: 'Custom quotes with the best value in the market.', desc_fr: 'Devis personnalisés avec le meilleur rapport qualité-prix.'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>`,
+            pt: 'Entrega DHL', en: 'DHL Shipping', fr: 'Livraison DHL',
+            desc_pt: 'Entrega expressa DHL com rastreamento em tempo real.', desc_en: 'DHL express delivery with real-time tracking.', desc_fr: 'Livraison DHL express avec suivi en temps réel.'
+          },
+          {
+            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>`,
+            pt: 'Suporte Multilíngue', en: 'Multilingual Support', fr: 'Support Multilingue',
+            desc_pt: 'Atendimento dedicado em Português, Inglês e Francês.', desc_en: 'Dedicated service in Portuguese, English and French.', desc_fr: 'Service dédié en Portugais, Anglais et Français.'
+          },
+        ].map(b => (
+          <div class="flex items-start gap-4 p-5 rounded-lg border border-gray-200 hover:border-gray-300 hover:shadow-sm transition-all bg-white">
+            <div class="w-12 h-12 rounded flex items-center justify-center shrink-0" style="background-color:#2D3A4B;">
+              <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={b.icon}></svg>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-sm uppercase mb-1" style="color:#2D3A4B;">
+                <span class="lang-pt">{b.pt}</span>
+                <span class="lang-en">{b.en}</span>
+                <span class="lang-fr">{b.fr}</span>
+              </h4>
+              <p class="text-gray-500 text-xs leading-relaxed">
+                <span class="lang-pt">{b.desc_pt}</span>
+                <span class="lang-en">{b.desc_en}</span>
+                <span class="lang-fr">{b.desc_fr}</span>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- READY FOR ORDER / FEATURED PRODUCTS -->
+  <section class="py-14" style="background-color:#f5f5f5;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
         <div>
-          <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-2">
-            <span class="lang-pt">Seleção Especial</span>
-            <span class="lang-en">Special Selection</span>
-            <span class="lang-fr">Sélection Spéciale</span>
-          </p>
-          <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900 mb-2">
-            <span class="lang-pt">Produtos em Destaque</span>
-            <span class="lang-en">Featured Products</span>
-            <span class="lang-fr">Produits en Vedette</span>
+          <h2 class="font-display font-extrabold text-2xl md:text-3xl uppercase mb-2" style="color:#041121;">
+            <span class="lang-pt">PRONTO PARA PEDIDO</span>
+            <span class="lang-en">READY FOR ORDER</span>
+            <span class="lang-fr">PRÊT À COMMANDER</span>
           </h2>
-          <p class="text-slate-500 text-sm">
-            <span class="lang-pt">Seleção dos produtos mais procurados</span>
-            <span class="lang-en">Our most sought-after product selection</span>
-            <span class="lang-fr">Notre sélection de produits les plus recherchés</span>
-          </p>
+          <div class="w-16 h-1" style="background-color:#FC0303;"></div>
         </div>
-        <a href="/shop" class="shrink-0 inline-flex items-center gap-1.5 text-gold-600 hover:text-gold-700 font-semibold text-sm transition-colors">
-          <span class="lang-pt">Ver todos</span>
-          <span class="lang-en">View all</span>
-          <span class="lang-fr">Voir tout</span>
+        <a href="/shop" class="shrink-0 inline-flex items-center gap-1.5 font-bold text-sm uppercase tracking-wide transition-all px-5 py-2 rounded" style="background-color:#BA1404; color:white;">
+          <span class="lang-pt">Ver Todos</span>
+          <span class="lang-en">View All Products</span>
+          <span class="lang-fr">Voir Tout</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {featured.map(p => {
           const cat = categories.find(c => c.id === p.category);
           return (
-            <div class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:shadow-slate-200 hover:-translate-y-1 transition-all">
-              <div class="relative h-48 bg-slate-100 overflow-hidden">
+            <div class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              <div class="relative h-48 bg-gray-100 overflow-hidden">
                 <img
                   src={p.image}
                   alt={p.name}
                   class="w-full h-full object-contain p-3 group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
-                  onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<svg class=\'w-12 h-12 text-slate-300\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1\' d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg>'"
+                  onerror="this.style.display='none';this.parentElement.classList.add('flex','items-center','justify-center');this.parentElement.innerHTML+='<svg class=\'w-12 h-12 text-gray-300\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1\' d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'/></svg>'"
                 />
                 <div class="absolute top-2 right-2">
-                  <span class="inline-block px-2 py-0.5 rounded-full text-[9px] font-semibold bg-navy-900/80 text-gold-400 uppercase tracking-wide">
+                  <span class="inline-block px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wide text-white" style="background-color:#2D3A4B;">
                     <span class="lang-pt">{cat?.label_pt}</span>
                     <span class="lang-en">{cat?.label_en}</span>
                     <span class="lang-fr">{cat?.label_fr}</span>
@@ -173,8 +224,13 @@ const featured = products.filter(p => featuredIds.includes(p.id));
                 </div>
               </div>
               <div class="p-4">
-                <h3 class="font-semibold text-navy-900 text-sm leading-snug mb-3 min-h-[2.5rem] line-clamp-2">{p.name}</h3>
-                <a href="/contact" class="flex items-center justify-center gap-1.5 w-full bg-navy-900 hover:bg-gold-500 text-white hover:text-navy-900 font-semibold text-xs py-2.5 rounded-xl transition-all">
+                <h3 class="font-semibold text-sm leading-snug mb-1 min-h-[2.5rem] line-clamp-2" style="color:#2D3A4B;">{p.name}</h3>
+                <p class="text-xs text-gray-400 mb-3">
+                  <span class="lang-pt">{cat?.label_pt}</span>
+                  <span class="lang-en">{cat?.label_en}</span>
+                  <span class="lang-fr">{cat?.label_fr}</span>
+                </p>
+                <a href="/contact" class="flex items-center justify-center gap-1.5 w-full text-white font-bold text-xs py-2.5 rounded transition-all uppercase tracking-wide" style="background-color:#376F20;">
                   <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                   <span class="lang-pt">Solicitar Cotação</span>
                   <span class="lang-en">Request Quote</span>
@@ -188,194 +244,52 @@ const featured = products.filter(p => featuredIds.includes(p.id));
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section class="py-24 bg-slate-50">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-        <span class="lang-pt">Quem Somos</span>
-        <span class="lang-en">Who We Are</span>
-        <span class="lang-fr">Qui Nous Sommes</span>
-      </p>
-      <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900 mb-8 leading-tight">
-        <span class="lang-pt">Sua Parceira Global de Importação e Exportação</span>
-        <span class="lang-en">Your Global Import & Export Partner</span>
-        <span class="lang-fr">Votre Partenaire Mondial d'Importation et d'Exportation</span>
-      </h2>
-      <div class="w-16 h-0.5 bg-gold-500 mx-auto mb-8"></div>
-      <p class="text-slate-600 text-base leading-relaxed mb-6">
-        <span class="lang-pt">A B3 Global nasceu com um propósito claro: exportar os melhores produtos brasileiros para o mundo. Fundada em 2006, nossa empresa tem sede no Brasil e filiais nos Estados Unidos e Canadá, cobrindo os principais mercados globais com agilidade e confiança.</span>
-        <span class="lang-en">B3 Global was founded in 2006 with a clear purpose: to export the finest Brazilian products to the world. Headquartered in Brazil with subsidiaries in the United States and Canada, we cover the world's major markets with agility and reliability.</span>
-        <span class="lang-fr">B3 Global a été fondée en 2006 avec un objectif clair : exporter les meilleurs produits brésiliens dans le monde entier. Basée au Brésil, avec des filiales aux États-Unis et au Canada, nous couvrons les principaux marchés mondiaux avec agilité et fiabilité.</span>
-      </p>
-      <p class="text-slate-600 text-base leading-relaxed mb-10">
-        <span class="lang-pt">Com mais de 150 produtos em 10 categorias — de alimentos e cosméticos a suplementos e produtos de higiene — oferecemos qualidade premium, entrega via DHL e suporte multilíngue dedicado. Cada transação é acompanhada do nosso compromisso de 100% de satisfação.</span>
-        <span class="lang-en">With over 150 products across 10 categories — from food and cosmetics to supplements and hygiene — we offer premium quality, DHL delivery, and dedicated multilingual support. Every transaction is backed by our 100% satisfaction commitment.</span>
-        <span class="lang-fr">Avec plus de 150 produits dans 10 catégories — de l'alimentation aux cosmétiques en passant par les compléments alimentaires et l'hygiène — nous offrons une qualité premium, la livraison DHL et un support multilingue dédié. Chaque transaction est garantie à 100% de satisfaction.</span>
-      </p>
-      <a href="/about" class="inline-flex items-center gap-2 bg-navy-900 hover:bg-gold-500 text-white hover:text-navy-900 font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5">
-        <span class="lang-pt">Saiba Mais</span>
-        <span class="lang-en">Learn More About Us</span>
-        <span class="lang-fr">En Savoir Plus</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- BENEFITS STRIP -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
-          <span class="lang-pt">Por Que Nos Escolher</span>
-          <span class="lang-en">Why Choose Us</span>
-          <span class="lang-fr">Pourquoi Nous Choisir</span>
-        </p>
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900">
-          <span class="lang-pt">Nossas Vantagens</span>
-          <span class="lang-en">Our Advantages</span>
-          <span class="lang-fr">Nos Avantages</span>
-        </h2>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        {[
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>`,
-            pt: 'Entrega Mundial', en: 'Worldwide Delivery', fr: 'Livraison Mondiale',
-            desc_pt: 'Enviamos para qualquer país', desc_en: 'We ship to any country', desc_fr: 'Nous livrons dans le monde entier'
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/>`,
-            pt: 'Ofertas Semanais', en: 'Weekly Deals', fr: 'Offres Hebdomadaires',
-            desc_pt: 'Promoções exclusivas toda semana', desc_en: 'Exclusive promotions every week', desc_fr: 'Promotions exclusives chaque semaine'
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>`,
-            pt: 'Marcas Premium', en: 'Premium Brands', fr: 'Marques Premium',
-            desc_pt: 'Produtos das melhores marcas', desc_en: 'Products from the best brands', desc_fr: 'Produits des meilleures marques'
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>`,
-            pt: 'Preço Competitivo', en: 'Fair Pricing', fr: 'Prix Compétitifs',
-            desc_pt: 'Melhor custo-benefício do mercado', desc_en: 'Best value in the market', desc_fr: 'Meilleur rapport qualité-prix'
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>`,
-            pt: 'Entrega DHL', en: 'DHL Shipping', fr: 'Livraison DHL',
-            desc_pt: 'Rastreamento em tempo real', desc_en: 'Real-time tracking included', desc_fr: 'Suivi en temps réel inclus'
-          },
-          {
-            icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>`,
-            pt: 'Suporte Multilíngue', en: 'Multilingual Support', fr: 'Support Multilingue',
-            desc_pt: 'PT · EN · FR atendimento dedicado', desc_en: 'PT · EN · FR dedicated service', desc_fr: 'Service dédié PT · EN · FR'
-          },
-        ].map(b => (
-          <div class="flex flex-col items-center text-center p-6 rounded-2xl border border-slate-200 hover:border-gold-300 hover:shadow-lg hover:shadow-gold-500/5 transition-all group">
-            <div class="w-14 h-14 rounded-2xl bg-navy-900 group-hover:bg-gold-500 flex items-center justify-center mb-4 transition-colors">
-              <svg class="w-7 h-7 text-gold-400 group-hover:text-navy-900 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={b.icon}></svg>
-            </div>
-            <h4 class="font-display font-bold text-navy-900 text-sm mb-1.5">
-              <span class="lang-pt">{b.pt}</span>
-              <span class="lang-en">{b.en}</span>
-              <span class="lang-fr">{b.fr}</span>
-            </h4>
-            <p class="text-slate-500 text-xs leading-relaxed">
-              <span class="lang-pt">{b.desc_pt}</span>
-              <span class="lang-en">{b.desc_en}</span>
-              <span class="lang-fr">{b.desc_fr}</span>
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- BACKGROUND IMAGE CTA -->
-  <section class="relative py-32 overflow-hidden">
+  <!-- CLIENTS REVIEWS (dark bg with image overlay) -->
+  <section class="relative py-20 overflow-hidden">
     <div class="absolute inset-0">
       <img
-        src="https://vermagmbh.com/wp-content/uploads/2022/09/wp2004328-cosmetics-wallpapers.jpg"
+        src="https://vermagmbh.com/wp-content/uploads/2022/09/back1-1-scaled-1.jpg"
         alt=""
         class="w-full h-full object-cover object-center"
+        onerror="this.parentElement.style.backgroundColor='#041121';"
       />
-      <div class="absolute inset-0 bg-navy-950/85"></div>
+      <div class="absolute inset-0" style="background-color:#000000cc;"></div>
     </div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p class="text-gold-400 text-xs font-semibold tracking-[0.2em] uppercase mb-5">
-        <span class="lang-pt">Solicite Sua Cotação</span>
-        <span class="lang-en">Request Your Quote</span>
-        <span class="lang-fr">Demandez Votre Devis</span>
-      </p>
-      <h2 class="font-display font-extrabold text-4xl md:text-5xl text-white mb-6 uppercase leading-tight tracking-tight">
-        <span class="lang-pt">SOLICITE SUA COTAÇÃO HOJE E APROVEITE PREÇOS COMPETITIVOS EM PRODUTOS BRASILEIROS PREMIUM</span>
-        <span class="lang-en">REQUEST YOUR QUOTE TODAY AND ENJOY COMPETITIVE PRICING ON PREMIUM BRAZILIAN PRODUCTS</span>
-        <span class="lang-fr">DEMANDEZ VOTRE DEVIS AUJOURD'HUI ET PROFITEZ DE PRIX COMPÉTITIFS SUR DES PRODUITS BRÉSILIENS PREMIUM</span>
-      </h2>
-      <p class="text-slate-300 text-base mb-10 max-w-2xl mx-auto">
-        <span class="lang-pt">Nossa equipe especializada está pronta para montar a proposta ideal para sua necessidade de importação ou exportação.</span>
-        <span class="lang-en">Our specialist team is ready to build the perfect proposal for your import or export needs.</span>
-        <span class="lang-fr">Notre équipe spécialisée est prête à construire la proposition idéale pour vos besoins d'importation ou d'exportation.</span>
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-gold-500/30">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <span class="lang-pt">Solicitar Cotação</span>
-          <span class="lang-en">Request a Quote</span>
-          <span class="lang-fr">Demander un Devis</span>
-        </a>
-        <a href="/shop" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all">
-          <span class="lang-pt">Ver Catálogo</span>
-          <span class="lang-en">Browse Catalog</span>
-          <span class="lang-fr">Voir le Catalogue</span>
-        </a>
-        <a href="https://wa.me/5511953954562" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold text-sm tracking-wide uppercase px-8 py-4 rounded-xl transition-all">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.401 5.605L0 24l6.604-1.375A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.868-1.292l-.35-.208-3.621.754.766-3.53-.228-.362A9.818 9.818 0 1112 21.818z"/></svg>
-          WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
-        <p class="text-gold-600 text-xs font-semibold tracking-[0.2em] uppercase mb-3">
-          <span class="lang-pt">Depoimentos</span>
-          <span class="lang-en">Testimonials</span>
-          <span class="lang-fr">Témoignages</span>
-        </p>
-        <h2 class="font-display font-bold text-3xl md:text-4xl text-navy-900 mb-3">
-          <span class="lang-pt">O Que Dizem Nossos Clientes</span>
-          <span class="lang-en">What Our Clients Say</span>
-          <span class="lang-fr">Ce Que Disent Nos Clients</span>
+        <h2 class="font-display font-extrabold text-3xl md:text-4xl text-white uppercase mb-3">
+          <span class="lang-pt">AVALIAÇÕES DE CLIENTES</span>
+          <span class="lang-en">CLIENTS REVIEWS</span>
+          <span class="lang-fr">AVIS DE CLIENTS</span>
         </h2>
-        <p class="text-slate-500 text-sm">
+        <div class="w-16 h-1 mx-auto" style="background-color:#FC0303;"></div>
+        <p class="text-gray-300 text-sm mt-4">
           <span class="lang-pt">Confiança construída através de anos de excelência</span>
           <span class="lang-en">Trust built through years of excellence</span>
           <span class="lang-fr">La confiance construite au fil des années d'excellence</span>
         </p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {[
           { name: 'Carlos M.', role_pt: 'Importador, São Paulo', role_en: 'Importer, São Paulo', role_fr: 'Importateur, São Paulo', text_pt: 'Excelente parceiro comercial. Produtos de alta qualidade, entrega pontual e suporte impecável. Recomendo fortemente.', text_en: 'Excellent business partner. High-quality products, on-time delivery, and impeccable support. Highly recommended.', text_fr: 'Excellent partenaire commercial. Produits de haute qualité, livraison ponctuelle et support impeccable. Je recommande vivement.' },
           { name: 'Ana Lima', role_pt: 'Distribuidora, Rio de Janeiro', role_en: 'Distributor, Rio de Janeiro', role_fr: 'Distributrice, Rio de Janeiro', text_pt: 'Trabalho com a B3 Global há anos. Sempre cumprem o que prometem. Embalagem cuidadosa e produtos autênticos.', text_en: "I've worked with B3 Global for years. They always deliver on their promises. Careful packaging and authentic products.", text_fr: "Je travaille avec B3 Global depuis des années. Ils tiennent toujours leurs promesses. Emballage soigné et produits authentiques." },
           { name: 'Roberto F.', role_pt: 'Atacadista, Curitiba', role_en: 'Wholesaler, Curitiba', role_fr: 'Grossiste, Curitiba', text_pt: 'Preços competitivos e variedade impressionante de produtos brasileiros. Meu fornecedor preferido para exportações.', text_en: 'Competitive prices and an impressive variety of Brazilian products. My preferred supplier for exports.', text_fr: 'Prix compétitifs et variété impressionnante de produits brésiliens. Mon fournisseur préféré pour les exportations.' },
-          { name: 'Mariana S.', role_pt: 'Empresária, Belo Horizonte', role_en: 'Business Owner, BH', role_fr: 'Cheffe d\'entreprise, BH', text_pt: 'Atendimento rápido e profissional. Os produtos chegaram perfeitos e dentro do prazo. Voltarei a comprar com certeza.', text_en: 'Fast and professional service. Products arrived perfectly and on time. I will definitely buy again.', text_fr: 'Service rapide et professionnel. Les produits sont arrivés parfaits et dans les délais. Je rachèterai certainement.' },
+          { name: 'Mariana S.', role_pt: 'Empresária, Belo Horizonte', role_en: 'Business Owner, BH', role_fr: "Cheffe d'entreprise, BH", text_pt: 'Atendimento rápido e profissional. Os produtos chegaram perfeitos e dentro do prazo. Voltarei a comprar com certeza.', text_en: 'Fast and professional service. Products arrived perfectly and on time. I will definitely buy again.', text_fr: 'Service rapide et professionnel. Les produits sont arrivés parfaits et dans les délais. Je rachèterai certainement.' },
         ].map(t => (
-          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col">
-            <svg class="w-6 h-6 text-gold-400 mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-            <p class="text-slate-600 text-sm leading-relaxed flex-1 mb-5">
+          <div class="rounded-lg p-6 flex flex-col" style="background-color:#2D3A4B;">
+            <svg class="w-7 h-7 mb-3" fill="currentColor" style="color:#F6AC06;" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="text-gray-300 text-sm leading-relaxed flex-1 mb-5">
               <span class="lang-pt">{t.text_pt}</span>
               <span class="lang-en">{t.text_en}</span>
               <span class="lang-fr">{t.text_fr}</span>
             </p>
-            <div class="flex items-center gap-3 border-t border-slate-100 pt-4">
-              <div class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center font-display font-bold text-gold-400 text-xs shrink-0">
+            <div class="flex items-center gap-3 border-t border-white/10 pt-4">
+              <div class="w-9 h-9 rounded-full flex items-center justify-center font-display font-bold text-xs shrink-0" style="background-color:#F6AC06; color:#041121;">
                 {t.name.split(' ').map(n => n[0]).join('')}
               </div>
               <div>
-                <div class="font-semibold text-navy-900 text-sm">{t.name}</div>
-                <div class="text-slate-500 text-xs">
+                <div class="font-bold text-white text-sm">{t.name}</div>
+                <div class="text-gray-400 text-xs">
                   <span class="lang-pt">{t.role_pt}</span>
                   <span class="lang-en">{t.role_en}</span>
                   <span class="lang-fr">{t.role_fr}</span>
