@@ -27,6 +27,7 @@ function isActive(path) {
   </script>
 
   <style is:inline>
+    html { overflow-x: hidden; }
     [data-lang="pt"] .lang-en { display: none !important; }
     [data-lang="pt"] .lang-fr { display: none !important; }
     [data-lang="en"] .lang-fr { display: none !important; }
@@ -35,24 +36,24 @@ function isActive(path) {
     [data-lang="en"] .lang-pt { display: none !important; }
   </style>
 </head>
-<body class="bg-white font-sans text-gray-800 antialiased">
+<body class="bg-white font-sans text-gray-800 antialiased overflow-x-hidden">
 
   <!-- TOP INFO BAR -->
-  <div class="bg-white border-b border-gray-200 text-xs py-2 hidden sm:block">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <div class="flex items-center gap-6 text-gray-500">
-        <span class="flex items-center gap-1.5">
+  <div class="bg-white border-b border-gray-200 text-xs py-2 hidden lg:block">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4 min-w-0">
+      <div class="flex items-center gap-4 text-gray-500 min-w-0 overflow-hidden">
+        <span class="flex items-center gap-1.5 shrink-0">
           <svg class="w-3.5 h-3.5 text-verma-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-          <span class="lang-pt">Brasil (Principal) · EUA · Canadá</span>
-          <span class="lang-en">Brazil (Main) · USA · Canada</span>
-          <span class="lang-fr">Brésil (Principal) · États-Unis · Canada</span>
+          <span class="lang-pt">Brasil · EUA · Canadá</span>
+          <span class="lang-en">Brazil · USA · Canada</span>
+          <span class="lang-fr">Brésil · États-Unis · Canada</span>
         </span>
-        <span class="flex items-center gap-1.5">
+        <span class="flex items-center gap-1.5 min-w-0">
           <svg class="w-3.5 h-3.5 text-verma-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          info@b3globalimportacaoeexporta.com.br
+          <span class="truncate">info@b3globalimportacaoeexporta.com.br</span>
         </span>
       </div>
-      <a href="https://wa.me/5511953954562" class="flex items-center gap-1.5 text-verma-green font-medium hover:opacity-80 transition-opacity">
+      <a href="https://wa.me/5511953954562" class="flex items-center gap-1.5 text-verma-green font-medium hover:opacity-80 transition-opacity shrink-0">
         <svg class="w-3.5 h-3.5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.507 3.934 1.401 5.605L0 24l6.604-1.375A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.868-1.292l-.35-.208-3.621.754.766-3.53-.228-.362A9.818 9.818 0 1112 21.818z"/></svg>
         WhatsApp: +55 11 95395-4562
       </a>
@@ -60,15 +61,15 @@ function isActive(path) {
   </div>
 
   <!-- MAIN HEADER (white, logo left, lang + CTA right) -->
-  <div class="bg-white border-b border-gray-200 py-4">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+  <div class="bg-white border-b border-gray-200 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3">
 
-      <!-- Logo (left, large) -->
-      <a href="/" class="flex items-center gap-4 group shrink-0">
-        <div class="w-14 h-14 rounded-lg bg-verma-dark flex items-center justify-center font-display font-bold text-gold-500 text-xl leading-none select-none shadow-md">B3</div>
-        <div class="leading-tight">
-          <div class="font-display font-bold text-verma-darkest text-2xl tracking-wide leading-none">B3 Global</div>
-          <div class="text-gray-400 text-[10px] tracking-[0.2em] uppercase font-medium mt-0.5">
+      <!-- Logo (left) -->
+      <a href="/" class="flex items-center gap-3 shrink-0">
+        <div class="w-11 h-11 rounded-lg bg-verma-dark flex items-center justify-center font-display font-bold text-gold-500 text-lg leading-none select-none shadow-sm">B3</div>
+        <div class="leading-tight min-w-0">
+          <div class="font-display font-bold text-verma-darkest text-xl tracking-wide leading-none">B3 Global</div>
+          <div class="text-gray-400 text-[10px] tracking-widest uppercase font-medium mt-0.5 hidden sm:block">
             <span class="lang-pt">Importação & Exportação</span>
             <span class="lang-en">Import & Export</span>
             <span class="lang-fr">Importation & Exportation</span>
@@ -77,35 +78,30 @@ function isActive(path) {
       </a>
 
       <!-- Right side: language + CTA -->
-      <div class="flex items-center gap-4">
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <!-- Language toggle -->
         <div class="flex items-center rounded border border-gray-300 overflow-hidden text-xs font-semibold">
-          <button id="btn-pt" onclick="setLang('pt')" class="px-3 py-2 transition-colors text-gray-500 hover:bg-gray-100">PT</button>
-          <span class="text-gray-300">|</span>
-          <button id="btn-en" onclick="setLang('en')" class="px-3 py-2 transition-colors text-gray-500 hover:bg-gray-100">EN</button>
-          <span class="text-gray-300">|</span>
-          <button id="btn-fr" onclick="setLang('fr')" class="px-3 py-2 transition-colors text-gray-500 hover:bg-gray-100">FR</button>
+          <button id="btn-pt" onclick="setLang('pt')" class="px-2.5 py-1.5 sm:px-3 sm:py-2 transition-colors text-gray-500 hover:bg-gray-100">PT</button>
+          <span class="text-gray-300 text-xs">|</span>
+          <button id="btn-en" onclick="setLang('en')" class="px-2.5 py-1.5 sm:px-3 sm:py-2 transition-colors text-gray-500 hover:bg-gray-100">EN</button>
+          <span class="text-gray-300 text-xs">|</span>
+          <button id="btn-fr" onclick="setLang('fr')" class="px-2.5 py-1.5 sm:px-3 sm:py-2 transition-colors text-gray-500 hover:bg-gray-100">FR</button>
         </div>
-        <!-- CTA -->
-        <a href="/contact" class="hidden sm:inline-flex items-center gap-2 bg-verma-green hover:bg-green-700 text-white font-bold text-sm px-5 py-2.5 rounded transition-colors uppercase tracking-wide">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <!-- CTA — hidden on mobile, visible sm+ -->
+        <a href="/contact" class="hidden sm:inline-flex items-center gap-1.5 bg-verma-green hover:bg-green-700 text-white font-bold text-xs px-4 py-2 rounded transition-colors uppercase tracking-wide whitespace-nowrap">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           <span class="lang-pt">Cotação</span>
           <span class="lang-en">Get Quote</span>
           <span class="lang-fr">Devis</span>
         </a>
-        <!-- Mobile menu btn -->
-        <button id="mobile-menu-btn" class="md:hidden text-gray-600 hover:text-gray-900 p-1.5" aria-label="Menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
       </div>
     </div>
   </div>
 
   <!-- NAV BAR (sticky, dark #2D3A4B) -->
   <header class="sticky top-0 z-50 bg-verma-dark shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <!-- Desktop nav -->
       <nav class="hidden md:flex items-center">
         <a href="/" class={`px-5 py-3 text-sm font-semibold uppercase tracking-wide transition-colors border-b-2 ${isActive('/') ? 'text-gold-500 border-gold-500' : 'text-white border-transparent hover:text-gold-400 hover:border-gold-400'}`}>
           <span class="lang-pt">Início</span>
@@ -129,18 +125,16 @@ function isActive(path) {
         </a>
       </nav>
 
-      <!-- Mobile nav placeholder row -->
-      <div class="md:hidden flex items-center justify-between h-12">
-        <span class="text-white text-sm font-semibold uppercase tracking-wide">Menu</span>
-        <button id="mobile-nav-btn" class="text-white p-1" aria-label="Toggle menu">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
+      <!-- Mobile: logo name + hamburger in nav bar -->
+      <span class="md:hidden text-white font-bold text-sm uppercase tracking-wide py-3">B3 Global</span>
+      <button id="mobile-nav-btn" class="md:hidden text-white p-3 -mr-3" aria-label="Toggle menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
 
-    <!-- Mobile menu -->
+    <!-- Mobile dropdown -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-verma-darker">
       <div class="px-4 py-3 space-y-0.5">
         <a href="/" class="block px-4 py-2.5 text-sm font-semibold uppercase tracking-wide text-white hover:bg-white/10 rounded">
@@ -155,7 +149,7 @@ function isActive(path) {
         <a href="/contact" class="block px-4 py-2.5 text-sm font-semibold uppercase tracking-wide text-white hover:bg-white/10 rounded">
           <span class="lang-pt">Contato</span><span class="lang-en">Contact</span><span class="lang-fr">Contact</span>
         </a>
-        <a href="/contact" class="block mt-2 bg-verma-green text-white font-bold text-sm px-4 py-2.5 rounded text-center uppercase tracking-wide">
+        <a href="/contact" class="block mt-2 text-white font-bold text-sm px-4 py-2.5 rounded text-center uppercase tracking-wide" style="background-color:#2E8D08;">
           <span class="lang-pt">Solicitar Cotação</span><span class="lang-en">Get a Quote</span><span class="lang-fr">Demander un Devis</span>
         </a>
       </div>
